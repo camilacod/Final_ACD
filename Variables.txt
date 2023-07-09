@@ -1,0 +1,72 @@
+#ID (ID niño)
+#Departamento (Departamento)
+#Sexo (1 masculino, 2 femenino)
+#EVAL_YODITEST variable importante (1 Sí, 2 No)
+#ID (ID niño)
+#P107 ¿Qué tipo de alumbrado tiene su hogar?
+   #Electricidad
+   #Gas licuado (GLP)
+   #Gas natural (tubería)
+   #Kerosone
+   #Vela
+   #Batería
+   #Otro
+#P112_COCINA ¿Tiene en su hogar cocina a gas? (1 Sí, 2 No)
+#P112_REFRIGERADORA ¿Tiene en su hogar refriegeradora? (1 Sí, 2 No)
+#P112_HORNO ¿Tiene en su hogar horno microondas? (1 Sí, 2 No)
+#P101 Tipo de vivienda 
+   #1Casa independiente
+   #2Departamento en edificio
+   #3Vivienda en quinta
+   #4Vivienda en casa de vecindad (callejón, solar o corralón)
+   #5Choza o cabaña
+   #6Vivienda improvisada
+   #7Local no destinado para habitación humana
+   #8Otro
+
+#ID (ID niño)
+#P204 Sexo del miembro del hogar (1 Masculino, 2 Femenino)
+#P210_PSOC_01 Programas Sociales 1
+#P210_PSOC_02 Programas Sociales 2
+#P210_PSOC_03 Programas Sociales 3
+   #1Cuna Más
+   #2Vaso de leche
+   #3Qali Warma
+   #4Juntos
+   #5Pensión 65
+   #6Vuelve a sonreir
+   #7Tayta Wasi
+   #8Otros programas
+   #9Ninguno
+   #10NS/NR
+#P209 Seguro de salud
+    #1EsSalud
+    #2FFAA
+    #3SIS
+    #4Entidad Prestadora Salud EPS
+    #5Seguro Privado
+    #6No tiene
+    #7NS/NR
+
+#ID (ID niño)
+#P313.1_CONSUME_MMN (Actualmente el niño consume Multimicronutrientes, 1 Sí, 2 No)
+#ID variable importante (ID niño)
+#P307 Señora en los últimos 12 meses, algún personal de la salud le dijo que el niño tiene anemia (1 Sí , 2 No, 3 NS/NR)
+#P311 Señora en los últimos 12 meses al niño le han hecho análisis para saber si tiene anemia (1 Sí, 2 No, 3 NS/NR)
+#P313 Señora alguna vez el niño ha consumido Suplemento de hierro (1 Sí, 2 No, 3 NS/NR)
+#ID variable importante (ID niño)
+#P331 En el último control CRED le explicaron sobre: Cómo es la alimentación de su niño según la edad (1 Sí, 2 No)
+#ID variable importante (ID niño)
+#P363 El personal de salud ha visitado su casa para conversar sobre qué debe hacer para que el niño este bien sanito (1 Sí, 2 No, 3 NS/NR)
+#P339 La última vez que asistió a una sesión demostrativa: Le enseñaron según la edad de su niño, qué cantidad y cuándo debe de comer (1 Sí, 2 No, 3 NS/NR)
+#P340 La última vez que asistió a una sesión demostrativa: Le enseñaron que su niño coma alimentos de origen animal ricos en hierro todos los días (1 Sí, 2 No, 3 NS/NR)
+#P341 La última vez que asistió a una sesión demostrativa: Le enseñaron que las preparaciones para su niño se acompañe con verduras y frutas de color (1 Sí, 2 No, 3 NS/NR)
+#ID variable importante (ID niño)
+#P367 Le dio pecho (leche materna) al niño (1 Sí, 2 No)
+#P369 Aún le está dando leche materna al niño (1 Sí, 2 No)
+#ID variable importante (ID niño)
+#P420 Hemoglobina (g/dl)
+#P407 Peso bruto (kilogramos)
+#P408 Peso neto (kilogramos)
+#P410 Talla (centímetros)
+#P401 Sexo (1 Masculino, 2 Femenino)
