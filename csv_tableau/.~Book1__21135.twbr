@@ -32,6 +32,1059 @@
     </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
   </_.fcp.AnimationOnByDefault.false...style>
   <datasources>
+    <datasource caption='data__gen_factor' inline='true' name='federated.0578rb91lnzj9b1choacu03mmvhe' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data_factor_sexo' name='textscan.1c1mrh31rgw3lr1ceq18m1nva8u5'>
+            <connection class='textscan' directory='/Users/camilacode/Library/Mobile Documents/com~apple~CloudDocs/Ciclo 5/ACD/Proyecto/vianev-ninos-2017-2018_0/csv_tableau' filename='data_factor_sexo.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='modified_data_scatter' name='textscan.0ot9wdj045svt317oip2s1h811jv'>
+            <connection class='textscan' directory='/Users/camilacode/Library/Mobile Documents/com~apple~CloudDocs/Ciclo 5/ACD/Proyecto/vianev-ninos-2017-2018_0/csv_tableau' filename='modified_data_scatter.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='data_hem' name='textscan.1px31s30qmrr901d9srj41gebml4'>
+            <connection class='textscan' directory='/Users/camilacode/Library/Mobile Documents/com~apple~CloudDocs/Ciclo 5/ACD/Proyecto/vianev-ninos-2017-2018_0/csv_tableau' filename='data_hem.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1px31s30qmrr901d9srj41gebml4' name='data_factor_sexo.csv' table='[data_factor_sexo#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='conglome' ordinal='0' />
+            <column datatype='integer' name='vivienda' ordinal='1' />
+            <column datatype='integer' name='id' ordinal='2' />
+            <column datatype='integer' name='altitud' ordinal='3' />
+            <column datatype='string' name='sexo' ordinal='4' />
+            <column datatype='string' name='departamento_x' ordinal='5' />
+            <column datatype='string' name='provincia_x' ordinal='6' />
+            <column datatype='string' name='distrito_x' ordinal='7' />
+            <column datatype='integer' name='res_peso' ordinal='8' />
+            <column datatype='integer' name='res_talla' ordinal='9' />
+            <column datatype='integer' name='res_hb' ordinal='10' />
+            <column datatype='integer' name='res_final' ordinal='11' />
+            <column datatype='string' name='dominio' ordinal='12' />
+            <column datatype='string' name='Area_Type' ordinal='13' />
+            <column datatype='string' name='pais' ordinal='14' />
+            <column datatype='string' name='index_' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0ot9wdj045svt317oip2s1h811jv' name='modified_data_scatter.csv' table='[modified_data_scatter#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='index_' ordinal='0' />
+              <column datatype='string' name='Amamantado' ordinal='1' />
+              <column datatype='string' name='sexo' ordinal='2' />
+              <column datatype='integer' name='Control' ordinal='3' />
+              <column datatype='real' name='BMI' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1px31s30qmrr901d9srj41gebml4' name='data_factor_sexo.csv' table='[data_factor_sexo#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='conglome' ordinal='0' />
+              <column datatype='integer' name='vivienda' ordinal='1' />
+              <column datatype='integer' name='id' ordinal='2' />
+              <column datatype='integer' name='altitud' ordinal='3' />
+              <column datatype='string' name='sexo' ordinal='4' />
+              <column datatype='string' name='departamento_x' ordinal='5' />
+              <column datatype='string' name='provincia_x' ordinal='6' />
+              <column datatype='string' name='distrito_x' ordinal='7' />
+              <column datatype='integer' name='res_peso' ordinal='8' />
+              <column datatype='integer' name='res_talla' ordinal='9' />
+              <column datatype='integer' name='res_hb' ordinal='10' />
+              <column datatype='integer' name='res_final' ordinal='11' />
+              <column datatype='string' name='dominio' ordinal='12' />
+              <column datatype='string' name='Area_Type' ordinal='13' />
+              <column datatype='string' name='pais' ordinal='14' />
+              <column datatype='string' name='index_' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1px31s30qmrr901d9srj41gebml4' name='data_hem.csv' table='[data_hem#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='index_' ordinal='0' />
+              <column datatype='integer' name='edad' ordinal='1' />
+              <column datatype='real' name='Hemoglobina' ordinal='2' />
+              <column datatype='string' name='sexo' ordinal='3' />
+              <column datatype='string' name='etapa' ordinal='4' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Amamantado]' value='[modified_data_scatter.csv].[Amamantado]' />
+          <map key='[Area_Type]' value='[data_factor_sexo.csv].[Area_Type]' />
+          <map key='[BMI]' value='[modified_data_scatter.csv].[BMI]' />
+          <map key='[Control]' value='[modified_data_scatter.csv].[Control]' />
+          <map key='[Hemoglobina]' value='[data_hem.csv].[Hemoglobina]' />
+          <map key='[altitud]' value='[data_factor_sexo.csv].[altitud]' />
+          <map key='[conglome]' value='[data_factor_sexo.csv].[conglome]' />
+          <map key='[departamento_x]' value='[data_factor_sexo.csv].[departamento_x]' />
+          <map key='[distrito_x]' value='[data_factor_sexo.csv].[distrito_x]' />
+          <map key='[dominio]' value='[data_factor_sexo.csv].[dominio]' />
+          <map key='[edad]' value='[data_hem.csv].[edad]' />
+          <map key='[etapa]' value='[data_hem.csv].[etapa]' />
+          <map key='[id]' value='[data_factor_sexo.csv].[id]' />
+          <map key='[index_ (data_factor_sexo.csv)]' value='[data_factor_sexo.csv].[index_]' />
+          <map key='[index_ (data_hem.csv)]' value='[data_hem.csv].[index_]' />
+          <map key='[index_]' value='[modified_data_scatter.csv].[index_]' />
+          <map key='[pais]' value='[data_factor_sexo.csv].[pais]' />
+          <map key='[provincia_x]' value='[data_factor_sexo.csv].[provincia_x]' />
+          <map key='[res_final]' value='[data_factor_sexo.csv].[res_final]' />
+          <map key='[res_hb]' value='[data_factor_sexo.csv].[res_hb]' />
+          <map key='[res_peso]' value='[data_factor_sexo.csv].[res_peso]' />
+          <map key='[res_talla]' value='[data_factor_sexo.csv].[res_talla]' />
+          <map key='[sexo (data_factor_sexo.csv)]' value='[data_factor_sexo.csv].[sexo]' />
+          <map key='[sexo (data_hem.csv)]' value='[data_hem.csv].[sexo]' />
+          <map key='[sexo]' value='[modified_data_scatter.csv].[sexo]' />
+          <map key='[vivienda]' value='[data_factor_sexo.csv].[vivienda]' />
+        </cols>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[modified_data_scatter.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[data_hem.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index_</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[index_]</local-name>
+            <parent-name>[modified_data_scatter.csv]</parent-name>
+            <remote-alias>index_</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amamantado</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Amamantado]</local-name>
+            <parent-name>[modified_data_scatter.csv]</parent-name>
+            <remote-alias>Amamantado</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sexo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sexo]</local-name>
+            <parent-name>[modified_data_scatter.csv]</parent-name>
+            <remote-alias>sexo</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Control</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Control]</local-name>
+            <parent-name>[modified_data_scatter.csv]</parent-name>
+            <remote-alias>Control</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BMI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BMI]</local-name>
+            <parent-name>[modified_data_scatter.csv]</parent-name>
+            <remote-alias>BMI</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>conglome</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[conglome]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>conglome</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vivienda</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[vivienda]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>vivienda</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>altitud</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[altitud]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>altitud</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sexo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sexo (data_factor_sexo.csv)]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>sexo</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>departamento_x</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[departamento_x]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>departamento_x</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>provincia_x</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[provincia_x]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>provincia_x</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>distrito_x</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[distrito_x]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>distrito_x</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>res_peso</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[res_peso]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>res_peso</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>res_talla</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[res_talla]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>res_talla</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>res_hb</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[res_hb]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>res_hb</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>res_final</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[res_final]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>res_final</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dominio</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dominio]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>dominio</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area_Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Area_Type]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>Area_Type</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pais</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pais]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>pais</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index_</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[index_ (data_factor_sexo.csv)]</local-name>
+            <parent-name>[data_factor_sexo.csv]</parent-name>
+            <remote-alias>index_</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index_</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[index_ (data_hem.csv)]</local-name>
+            <parent-name>[data_hem.csv]</parent-name>
+            <remote-alias>index_</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>edad</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[edad]</local-name>
+            <parent-name>[data_hem.csv]</parent-name>
+            <remote-alias>edad</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hemoglobina</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Hemoglobina]</local-name>
+            <parent-name>[data_hem.csv]</parent-name>
+            <remote-alias>Hemoglobina</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sexo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sexo (data_hem.csv)]</local-name>
+            <parent-name>[data_hem.csv]</parent-name>
+            <remote-alias>sexo</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>etapa</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[etapa]</local-name>
+            <parent-name>[data_hem.csv]</parent-name>
+            <remote-alias>etapa</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0578rb91lnzj9b1choacu03mmvhe]&quot;' value='Edad promedio (meses)' />
+        </aliases>
+      </column>
+      <column caption='Area Type' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
+      <column caption='BMI1' datatype='real' name='[BMI]' role='measure' type='quantitative' />
+      <column caption='Control1' datatype='integer' name='[Control]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='data_factor_sexo.csv' datatype='table' name='[__tableau_internal_object_id__].[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='data_hem.csv' datatype='table' name='[__tableau_internal_object_id__].[data_hem.csv_FA311E0505EF428484F71004823D432C]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='modified_data_scatter.csv' datatype='table' name='[__tableau_internal_object_id__].[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]' role='measure' type='quantitative' />
+      <column caption='Altitud' datatype='integer' name='[altitud]' role='measure' type='quantitative' />
+      <column caption='Conglome' datatype='integer' name='[conglome]' role='measure' type='quantitative' />
+      <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' type='nominal' />
+      <column caption='Distrito X' datatype='string' name='[distrito_x]' role='dimension' type='nominal' />
+      <column caption='Dominio' datatype='string' name='[dominio]' role='dimension' type='nominal' />
+      <column caption='Edad' datatype='integer' name='[edad]' role='measure' type='quantitative' />
+      <column caption='Etapa' datatype='string' name='[etapa]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Index  (Data Factor Sexo.Csv)' datatype='string' name='[index_ (data_factor_sexo.csv)]' role='dimension' type='nominal' />
+      <column caption='Index  (Data Hem.Csv)' datatype='string' name='[index_ (data_hem.csv)]' role='dimension' type='nominal' />
+      <column caption='Index' datatype='string' name='[index_]' role='dimension' type='nominal' />
+      <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Provincia X' datatype='string' name='[provincia_x]' role='dimension' type='nominal' />
+      <column caption='Res Final' datatype='integer' name='[res_final]' role='measure' type='quantitative' />
+      <column caption='Res Hb' datatype='integer' name='[res_hb]' role='measure' type='quantitative' />
+      <column caption='Res Peso' datatype='integer' name='[res_peso]' role='measure' type='quantitative' />
+      <column caption='Res Talla' datatype='integer' name='[res_talla]' role='measure' type='quantitative' />
+      <column caption='Sexo (Data Factor Sexo.Csv)' datatype='string' name='[sexo (data_factor_sexo.csv)]' role='dimension' type='nominal' />
+      <column caption='Sexo (Data Hem.Csv)' datatype='string' name='[sexo (data_hem.csv)]' role='dimension' type='nominal' />
+      <column caption='Sexo' datatype='string' name='[sexo]' role='dimension' type='nominal' />
+      <column caption='Vivienda' datatype='integer' name='[vivienda]' role='measure' type='quantitative' />
+      <group caption='Action (Departamento X,Pais)' hidden='true' name='[Action (Departamento X,Pais)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[departamento_x]' />
+          <groupfilter function='level-members' level='[pais]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/camilacode/Documents/My Tableau Repository/Datasources/data__gen_factor.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='07/11/2023 07:32:48 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366' table='[Extract].[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6' table='[Extract].[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]' type='table' />
+            <relation name='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366' table='[Extract].[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]' type='table' />
+            <relation name='data_hem.csv_FA311E0505EF428484F71004823D432C' table='[Extract].[data_hem.csv_FA311E0505EF428484F71004823D432C]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[Amamantado]' value='[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6].[Amamantado]' />
+            <map key='[Area_Type]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[Area_Type]' />
+            <map key='[BMI]' value='[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6].[BMI]' />
+            <map key='[Control]' value='[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6].[Control]' />
+            <map key='[Hemoglobina]' value='[data_hem.csv_FA311E0505EF428484F71004823D432C].[Hemoglobina]' />
+            <map key='[altitud]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[altitud]' />
+            <map key='[conglome]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[conglome]' />
+            <map key='[departamento_x]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[departamento_x]' />
+            <map key='[distrito_x]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[distrito_x]' />
+            <map key='[dominio]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[dominio]' />
+            <map key='[edad]' value='[data_hem.csv_FA311E0505EF428484F71004823D432C].[edad]' />
+            <map key='[etapa]' value='[data_hem.csv_FA311E0505EF428484F71004823D432C].[etapa]' />
+            <map key='[id]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[id]' />
+            <map key='[index_ (data_factor_sexo.csv)]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[index_]' />
+            <map key='[index_ (data_hem.csv)]' value='[data_hem.csv_FA311E0505EF428484F71004823D432C].[index_]' />
+            <map key='[index_]' value='[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6].[index_]' />
+            <map key='[pais]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[pais]' />
+            <map key='[provincia_x]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[provincia_x]' />
+            <map key='[res_final]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[res_final]' />
+            <map key='[res_hb]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[res_hb]' />
+            <map key='[res_peso]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[res_peso]' />
+            <map key='[res_talla]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[res_talla]' />
+            <map key='[sexo (data_factor_sexo.csv)]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[sexo]' />
+            <map key='[sexo (data_hem.csv)]' value='[data_hem.csv_FA311E0505EF428484F71004823D432C].[sexo]' />
+            <map key='[sexo]' value='[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6].[sexo]' />
+            <map key='[vivienda]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[vivienda]' />
+          </cols>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='data__gen_factor' increment-value='%null%' refresh-type='create' rows-inserted='4222' timestamp-start='2023-07-11 19:32:47.977' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>index_</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[index_]</local-name>
+              <parent-name>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</parent-name>
+              <remote-alias>index_</remote-alias>
+              <ordinal>0</ordinal>
+              <family>modified_data_scatter.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>511</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Amamantado</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Amamantado]</local-name>
+              <parent-name>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</parent-name>
+              <remote-alias>Amamantado</remote-alias>
+              <ordinal>1</ordinal>
+              <family>modified_data_scatter.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sexo</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[sexo]</local-name>
+              <parent-name>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</parent-name>
+              <remote-alias>sexo</remote-alias>
+              <ordinal>2</ordinal>
+              <family>modified_data_scatter.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Control</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Control]</local-name>
+              <parent-name>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</parent-name>
+              <remote-alias>Control</remote-alias>
+              <ordinal>3</ordinal>
+              <family>modified_data_scatter.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BMI</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[BMI]</local-name>
+              <parent-name>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</parent-name>
+              <remote-alias>BMI</remote-alias>
+              <ordinal>4</ordinal>
+              <family>modified_data_scatter.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1821</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>conglome</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[conglome]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>conglome</remote-alias>
+              <ordinal>5</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>303</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vivienda</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[vivienda]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>vivienda</remote-alias>
+              <ordinal>6</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>171</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>7</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>altitud</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[altitud]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>altitud</remote-alias>
+              <ordinal>8</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>195</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sexo</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[sexo (data_factor_sexo.csv)]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>sexo</remote-alias>
+              <ordinal>9</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>departamento_x</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[departamento_x]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>departamento_x</remote-alias>
+              <ordinal>10</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>provincia_x</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[provincia_x]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>provincia_x</remote-alias>
+              <ordinal>11</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>111</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>distrito_x</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[distrito_x]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>distrito_x</remote-alias>
+              <ordinal>12</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>222</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>res_peso</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[res_peso]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>res_peso</remote-alias>
+              <ordinal>13</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>res_talla</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[res_talla]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>res_talla</remote-alias>
+              <ordinal>14</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>res_hb</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[res_hb]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>res_hb</remote-alias>
+              <ordinal>15</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>res_final</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[res_final]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>res_final</remote-alias>
+              <ordinal>16</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dominio</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dominio]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>dominio</remote-alias>
+              <ordinal>17</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Area_Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Area_Type]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>Area_Type</remote-alias>
+              <ordinal>18</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pais</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[pais]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>pais</remote-alias>
+              <ordinal>19</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>index_</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[index_ (data_factor_sexo.csv)]</local-name>
+              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
+              <remote-alias>index_</remote-alias>
+              <ordinal>20</ordinal>
+              <family>data_factor_sexo.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>461</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>index_</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[index_ (data_hem.csv)]</local-name>
+              <parent-name>[data_hem.csv_FA311E0505EF428484F71004823D432C]</parent-name>
+              <remote-alias>index_</remote-alias>
+              <ordinal>21</ordinal>
+              <family>data_hem.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>73</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>edad</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[edad]</local-name>
+              <parent-name>[data_hem.csv_FA311E0505EF428484F71004823D432C]</parent-name>
+              <remote-alias>edad</remote-alias>
+              <ordinal>22</ordinal>
+              <family>data_hem.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Hemoglobina</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Hemoglobina]</local-name>
+              <parent-name>[data_hem.csv_FA311E0505EF428484F71004823D432C]</parent-name>
+              <remote-alias>Hemoglobina</remote-alias>
+              <ordinal>23</ordinal>
+              <family>data_hem.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sexo</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[sexo (data_hem.csv)]</local-name>
+              <parent-name>[data_hem.csv_FA311E0505EF428484F71004823D432C]</parent-name>
+              <remote-alias>sexo</remote-alias>
+              <ordinal>24</ordinal>
+              <family>data_hem.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>etapa</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[etapa]</local-name>
+              <parent-name>[data_hem.csv_FA311E0505EF428484F71004823D432C]</parent-name>
+              <remote-alias>etapa</remote-alias>
+              <ordinal>25</ordinal>
+              <family>data_hem.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='data_factor_sexo.csv' id='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366'>
+            <properties context=''>
+              <relation connection='textscan.1px31s30qmrr901d9srj41gebml4' name='data_factor_sexo.csv' table='[data_factor_sexo#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='conglome' ordinal='0' />
+                  <column datatype='integer' name='vivienda' ordinal='1' />
+                  <column datatype='integer' name='id' ordinal='2' />
+                  <column datatype='integer' name='altitud' ordinal='3' />
+                  <column datatype='string' name='sexo' ordinal='4' />
+                  <column datatype='string' name='departamento_x' ordinal='5' />
+                  <column datatype='string' name='provincia_x' ordinal='6' />
+                  <column datatype='string' name='distrito_x' ordinal='7' />
+                  <column datatype='integer' name='res_peso' ordinal='8' />
+                  <column datatype='integer' name='res_talla' ordinal='9' />
+                  <column datatype='integer' name='res_hb' ordinal='10' />
+                  <column datatype='integer' name='res_final' ordinal='11' />
+                  <column datatype='string' name='dominio' ordinal='12' />
+                  <column datatype='string' name='Area_Type' ordinal='13' />
+                  <column datatype='string' name='pais' ordinal='14' />
+                  <column datatype='string' name='index_' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366' table='[Extract].[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]' type='table' />
+            </properties>
+          </object>
+          <object caption='data_hem.csv' id='data_hem.csv_FA311E0505EF428484F71004823D432C'>
+            <properties context=''>
+              <relation connection='textscan.1px31s30qmrr901d9srj41gebml4' name='data_hem.csv' table='[data_hem#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='index_' ordinal='0' />
+                  <column datatype='integer' name='edad' ordinal='1' />
+                  <column datatype='real' name='Hemoglobina' ordinal='2' />
+                  <column datatype='string' name='sexo' ordinal='3' />
+                  <column datatype='string' name='etapa' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='data_hem.csv_FA311E0505EF428484F71004823D432C' table='[Extract].[data_hem.csv_FA311E0505EF428484F71004823D432C]' type='table' />
+            </properties>
+          </object>
+          <object caption='modified_data_scatter.csv' id='modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6'>
+            <properties context=''>
+              <relation connection='textscan.0ot9wdj045svt317oip2s1h811jv' name='modified_data_scatter.csv' table='[modified_data_scatter#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='index_' ordinal='0' />
+                  <column datatype='string' name='Amamantado' ordinal='1' />
+                  <column datatype='string' name='sexo' ordinal='2' />
+                  <column datatype='integer' name='Control' ordinal='3' />
+                  <column datatype='real' name='BMI' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6' table='[Extract].[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[index_]' />
+              <expression op='[index_ (data_factor_sexo.csv)]' />
+            </expression>
+            <first-end-point object-id='modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6' />
+            <second-end-point object-id='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[index_ (data_factor_sexo.csv)]' />
+              <expression op='[index_ (data_hem.csv)]' />
+            </expression>
+            <first-end-point object-id='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366' />
+            <second-end-point object-id='data_hem.csv_FA311E0505EF428484F71004823D432C' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
     <datasource caption='data_factor_sexo' inline='true' name='federated.1wf3gnq1miaxzk15qzrm40laz0bn' version='18.1'>
       <connection class='federated'>
         <named-connections>
@@ -1309,6 +2362,11 @@
           <groupfilter function='level-members' level='[sexo]' />
         </groupfilter>
       </group>
+      <group caption='Action (Zona)' hidden='true' name='[Action (Zona)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Area_Type]' />
+        </groupfilter>
+      </group>
       <group hidden='true' name='[Exclusions (Anemia1,P209)]' name-style='unqualified' user:auto-column='exclude'>
         <groupfilter function='crossjoin'>
           <groupfilter function='level-members' level='[none:Anemia:nk]' />
@@ -2316,6 +3374,17 @@
               <bucket>&quot;Urbano&quot;</bucket>
             </map>
           </encoding>
+          <encoding attr='color' field='[none:Anemia:nk]' palette='sf_water' type='palette'>
+            <map to='#68ceee'>
+              <bucket>&quot;Si&quot;</bucket>
+            </map>
+            <map to='#96f2ee'>
+              <bucket>&quot;No&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NS&quot;</bucket>
+            </map>
+          </encoding>
           <encoding attr='color' field='[none:sexo:nk]' palette='blue_10_0' type='palette'>
             <map to='#2a5783'>
               <bucket>&quot;Masculino&quot;</bucket>
@@ -2346,17 +3415,6 @@
             </map>
             <map to='#b9ddf1'>
               <bucket>&quot;Femenino&quot;</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[none:Anemia:nk]' palette='sf_water' type='palette'>
-            <map to='#68ceee'>
-              <bucket>&quot;Si&quot;</bucket>
-            </map>
-            <map to='#96f2ee'>
-              <bucket>&quot;No&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;NS&quot;</bucket>
             </map>
           </encoding>
           <encoding attr='color' field='[none:suplementos:nk]' palette='blue_10_0' type='palette'>
@@ -2546,1041 +3604,14 @@
         </relationships>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
-    <datasource caption='data__gen_factor' inline='true' name='federated.0578rb91lnzj9b1choacu03mmvhe' version='18.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='data_factor_sexo' name='textscan.1c1mrh31rgw3lr1ceq18m1nva8u5'>
-            <connection class='textscan' directory='/Users/camilacode/Library/Mobile Documents/com~apple~CloudDocs/Ciclo 5/ACD/Proyecto/vianev-ninos-2017-2018_0/csv_tableau' filename='data_factor_sexo.csv' password='' server='' workgroup-auth-mode='as-is' />
-          </named-connection>
-          <named-connection caption='modified_data_scatter' name='textscan.0ot9wdj045svt317oip2s1h811jv'>
-            <connection class='textscan' directory='/Users/camilacode/Library/Mobile Documents/com~apple~CloudDocs/Ciclo 5/ACD/Proyecto/vianev-ninos-2017-2018_0/csv_tableau' filename='modified_data_scatter.csv' password='' server='' workgroup-auth-mode='as-is' />
-          </named-connection>
-          <named-connection caption='data_hem' name='textscan.1px31s30qmrr901d9srj41gebml4'>
-            <connection class='textscan' directory='/Users/camilacode/Library/Mobile Documents/com~apple~CloudDocs/Ciclo 5/ACD/Proyecto/vianev-ninos-2017-2018_0/csv_tableau' filename='data_hem.csv' password='' server='' workgroup-auth-mode='as-is' />
-          </named-connection>
-        </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1px31s30qmrr901d9srj41gebml4' name='data_factor_sexo.csv' table='[data_factor_sexo#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='conglome' ordinal='0' />
-            <column datatype='integer' name='vivienda' ordinal='1' />
-            <column datatype='integer' name='id' ordinal='2' />
-            <column datatype='integer' name='altitud' ordinal='3' />
-            <column datatype='string' name='sexo' ordinal='4' />
-            <column datatype='string' name='departamento_x' ordinal='5' />
-            <column datatype='string' name='provincia_x' ordinal='6' />
-            <column datatype='string' name='distrito_x' ordinal='7' />
-            <column datatype='integer' name='res_peso' ordinal='8' />
-            <column datatype='integer' name='res_talla' ordinal='9' />
-            <column datatype='integer' name='res_hb' ordinal='10' />
-            <column datatype='integer' name='res_final' ordinal='11' />
-            <column datatype='string' name='dominio' ordinal='12' />
-            <column datatype='string' name='Area_Type' ordinal='13' />
-            <column datatype='string' name='pais' ordinal='14' />
-            <column datatype='string' name='index_' ordinal='15' />
-          </columns>
-        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
-          <relation connection='textscan.0ot9wdj045svt317oip2s1h811jv' name='modified_data_scatter.csv' table='[modified_data_scatter#csv]' type='table'>
-            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-              <column datatype='string' name='index_' ordinal='0' />
-              <column datatype='string' name='Amamantado' ordinal='1' />
-              <column datatype='string' name='sexo' ordinal='2' />
-              <column datatype='integer' name='Control' ordinal='3' />
-              <column datatype='real' name='BMI' ordinal='4' />
-            </columns>
-          </relation>
-          <relation connection='textscan.1px31s30qmrr901d9srj41gebml4' name='data_factor_sexo.csv' table='[data_factor_sexo#csv]' type='table'>
-            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-              <column datatype='integer' name='conglome' ordinal='0' />
-              <column datatype='integer' name='vivienda' ordinal='1' />
-              <column datatype='integer' name='id' ordinal='2' />
-              <column datatype='integer' name='altitud' ordinal='3' />
-              <column datatype='string' name='sexo' ordinal='4' />
-              <column datatype='string' name='departamento_x' ordinal='5' />
-              <column datatype='string' name='provincia_x' ordinal='6' />
-              <column datatype='string' name='distrito_x' ordinal='7' />
-              <column datatype='integer' name='res_peso' ordinal='8' />
-              <column datatype='integer' name='res_talla' ordinal='9' />
-              <column datatype='integer' name='res_hb' ordinal='10' />
-              <column datatype='integer' name='res_final' ordinal='11' />
-              <column datatype='string' name='dominio' ordinal='12' />
-              <column datatype='string' name='Area_Type' ordinal='13' />
-              <column datatype='string' name='pais' ordinal='14' />
-              <column datatype='string' name='index_' ordinal='15' />
-            </columns>
-          </relation>
-          <relation connection='textscan.1px31s30qmrr901d9srj41gebml4' name='data_hem.csv' table='[data_hem#csv]' type='table'>
-            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-              <column datatype='string' name='index_' ordinal='0' />
-              <column datatype='integer' name='edad' ordinal='1' />
-              <column datatype='real' name='Hemoglobina' ordinal='2' />
-              <column datatype='string' name='sexo' ordinal='3' />
-              <column datatype='string' name='etapa' ordinal='4' />
-            </columns>
-          </relation>
-        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
-        <cols>
-          <map key='[Amamantado]' value='[modified_data_scatter.csv].[Amamantado]' />
-          <map key='[Area_Type]' value='[data_factor_sexo.csv].[Area_Type]' />
-          <map key='[BMI]' value='[modified_data_scatter.csv].[BMI]' />
-          <map key='[Control]' value='[modified_data_scatter.csv].[Control]' />
-          <map key='[Hemoglobina]' value='[data_hem.csv].[Hemoglobina]' />
-          <map key='[altitud]' value='[data_factor_sexo.csv].[altitud]' />
-          <map key='[conglome]' value='[data_factor_sexo.csv].[conglome]' />
-          <map key='[departamento_x]' value='[data_factor_sexo.csv].[departamento_x]' />
-          <map key='[distrito_x]' value='[data_factor_sexo.csv].[distrito_x]' />
-          <map key='[dominio]' value='[data_factor_sexo.csv].[dominio]' />
-          <map key='[edad]' value='[data_hem.csv].[edad]' />
-          <map key='[etapa]' value='[data_hem.csv].[etapa]' />
-          <map key='[id]' value='[data_factor_sexo.csv].[id]' />
-          <map key='[index_ (data_factor_sexo.csv)]' value='[data_factor_sexo.csv].[index_]' />
-          <map key='[index_ (data_hem.csv)]' value='[data_hem.csv].[index_]' />
-          <map key='[index_]' value='[modified_data_scatter.csv].[index_]' />
-          <map key='[pais]' value='[data_factor_sexo.csv].[pais]' />
-          <map key='[provincia_x]' value='[data_factor_sexo.csv].[provincia_x]' />
-          <map key='[res_final]' value='[data_factor_sexo.csv].[res_final]' />
-          <map key='[res_hb]' value='[data_factor_sexo.csv].[res_hb]' />
-          <map key='[res_peso]' value='[data_factor_sexo.csv].[res_peso]' />
-          <map key='[res_talla]' value='[data_factor_sexo.csv].[res_talla]' />
-          <map key='[sexo (data_factor_sexo.csv)]' value='[data_factor_sexo.csv].[sexo]' />
-          <map key='[sexo (data_hem.csv)]' value='[data_hem.csv].[sexo]' />
-          <map key='[sexo]' value='[modified_data_scatter.csv].[sexo]' />
-          <map key='[vivienda]' value='[data_factor_sexo.csv].[vivienda]' />
-        </cols>
-        <refresh increment-key='' incremental-updates='false' />
-        <metadata-records>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[modified_data_scatter.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[data_hem.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>index_</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[index_]</local-name>
-            <parent-name>[modified_data_scatter.csv]</parent-name>
-            <remote-alias>index_</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Amamantado</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Amamantado]</local-name>
-            <parent-name>[modified_data_scatter.csv]</parent-name>
-            <remote-alias>Amamantado</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>sexo</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[sexo]</local-name>
-            <parent-name>[modified_data_scatter.csv]</parent-name>
-            <remote-alias>sexo</remote-alias>
-            <ordinal>2</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Control</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Control]</local-name>
-            <parent-name>[modified_data_scatter.csv]</parent-name>
-            <remote-alias>Control</remote-alias>
-            <ordinal>3</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>BMI</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[BMI]</local-name>
-            <parent-name>[modified_data_scatter.csv]</parent-name>
-            <remote-alias>BMI</remote-alias>
-            <ordinal>4</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>conglome</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[conglome]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>conglome</remote-alias>
-            <ordinal>5</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>vivienda</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[vivienda]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>vivienda</remote-alias>
-            <ordinal>6</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>id</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[id]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>id</remote-alias>
-            <ordinal>7</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>altitud</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[altitud]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>altitud</remote-alias>
-            <ordinal>8</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>sexo</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[sexo (data_factor_sexo.csv)]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>sexo</remote-alias>
-            <ordinal>9</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>departamento_x</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[departamento_x]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>departamento_x</remote-alias>
-            <ordinal>10</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>provincia_x</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[provincia_x]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>provincia_x</remote-alias>
-            <ordinal>11</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>distrito_x</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[distrito_x]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>distrito_x</remote-alias>
-            <ordinal>12</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>res_peso</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[res_peso]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>res_peso</remote-alias>
-            <ordinal>13</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>res_talla</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[res_talla]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>res_talla</remote-alias>
-            <ordinal>14</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>res_hb</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[res_hb]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>res_hb</remote-alias>
-            <ordinal>15</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>res_final</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[res_final]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>res_final</remote-alias>
-            <ordinal>16</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>dominio</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[dominio]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>dominio</remote-alias>
-            <ordinal>17</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Area_Type</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Area_Type]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>Area_Type</remote-alias>
-            <ordinal>18</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>pais</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[pais]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>pais</remote-alias>
-            <ordinal>19</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>index_</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[index_ (data_factor_sexo.csv)]</local-name>
-            <parent-name>[data_factor_sexo.csv]</parent-name>
-            <remote-alias>index_</remote-alias>
-            <ordinal>20</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>index_</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[index_ (data_hem.csv)]</local-name>
-            <parent-name>[data_hem.csv]</parent-name>
-            <remote-alias>index_</remote-alias>
-            <ordinal>21</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>edad</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[edad]</local-name>
-            <parent-name>[data_hem.csv]</parent-name>
-            <remote-alias>edad</remote-alias>
-            <ordinal>22</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Hemoglobina</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Hemoglobina]</local-name>
-            <parent-name>[data_hem.csv]</parent-name>
-            <remote-alias>Hemoglobina</remote-alias>
-            <ordinal>23</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>sexo</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[sexo (data_hem.csv)]</local-name>
-            <parent-name>[data_hem.csv]</parent-name>
-            <remote-alias>sexo</remote-alias>
-            <ordinal>24</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>etapa</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[etapa]</local-name>
-            <parent-name>[data_hem.csv]</parent-name>
-            <remote-alias>etapa</remote-alias>
-            <ordinal>25</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[data_hem.csv_FA311E0505EF428484F71004823D432C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
-        <aliases>
-          <alias key='&quot;[federated.0578rb91lnzj9b1choacu03mmvhe]&quot;' value='Edad promedio (meses)' />
-        </aliases>
-      </column>
-      <column caption='Area Type' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
-      <column caption='BMI1' datatype='real' name='[BMI]' role='measure' type='quantitative' />
-      <column caption='Control1' datatype='integer' name='[Control]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='data_factor_sexo.csv' datatype='table' name='[__tableau_internal_object_id__].[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='data_hem.csv' datatype='table' name='[__tableau_internal_object_id__].[data_hem.csv_FA311E0505EF428484F71004823D432C]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='modified_data_scatter.csv' datatype='table' name='[__tableau_internal_object_id__].[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]' role='measure' type='quantitative' />
-      <column caption='Altitud' datatype='integer' name='[altitud]' role='measure' type='quantitative' />
-      <column caption='Conglome' datatype='integer' name='[conglome]' role='measure' type='quantitative' />
-      <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' type='nominal' />
-      <column caption='Distrito X' datatype='string' name='[distrito_x]' role='dimension' type='nominal' />
-      <column caption='Dominio' datatype='string' name='[dominio]' role='dimension' type='nominal' />
-      <column caption='Edad' datatype='integer' name='[edad]' role='measure' type='quantitative' />
-      <column caption='Etapa' datatype='string' name='[etapa]' role='dimension' type='nominal' />
-      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
-      <column caption='Index  (Data Factor Sexo.Csv)' datatype='string' name='[index_ (data_factor_sexo.csv)]' role='dimension' type='nominal' />
-      <column caption='Index  (Data Hem.Csv)' datatype='string' name='[index_ (data_hem.csv)]' role='dimension' type='nominal' />
-      <column caption='Index' datatype='string' name='[index_]' role='dimension' type='nominal' />
-      <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
-      <column caption='Provincia X' datatype='string' name='[provincia_x]' role='dimension' type='nominal' />
-      <column caption='Res Final' datatype='integer' name='[res_final]' role='measure' type='quantitative' />
-      <column caption='Res Hb' datatype='integer' name='[res_hb]' role='measure' type='quantitative' />
-      <column caption='Res Peso' datatype='integer' name='[res_peso]' role='measure' type='quantitative' />
-      <column caption='Res Talla' datatype='integer' name='[res_talla]' role='measure' type='quantitative' />
-      <column caption='Sexo (Data Factor Sexo.Csv)' datatype='string' name='[sexo (data_factor_sexo.csv)]' role='dimension' type='nominal' />
-      <column caption='Sexo (Data Hem.Csv)' datatype='string' name='[sexo (data_hem.csv)]' role='dimension' type='nominal' />
-      <column caption='Sexo' datatype='string' name='[sexo]' role='dimension' type='nominal' />
-      <column caption='Vivienda' datatype='integer' name='[vivienda]' role='measure' type='quantitative' />
-      <group caption='Action (Departamento X,Pais)' hidden='true' name='[Action (Departamento X,Pais)]' name-style='unqualified' user:auto-column='sheet_link'>
-        <groupfilter function='crossjoin'>
-          <groupfilter function='level-members' level='[departamento_x]' />
-          <groupfilter function='level-members' level='[pais]' />
-        </groupfilter>
-      </group>
-      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' units='records'>
-        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/camilacode/Documents/My Tableau Repository/Datasources/data__gen_factor.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='07/11/2023 07:32:48 PM' username='tableau_internal_user'>
-          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366' table='[Extract].[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]' type='table' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
-            <relation name='modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6' table='[Extract].[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]' type='table' />
-            <relation name='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366' table='[Extract].[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]' type='table' />
-            <relation name='data_hem.csv_FA311E0505EF428484F71004823D432C' table='[Extract].[data_hem.csv_FA311E0505EF428484F71004823D432C]' type='table' />
-          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
-          <cols>
-            <map key='[Amamantado]' value='[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6].[Amamantado]' />
-            <map key='[Area_Type]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[Area_Type]' />
-            <map key='[BMI]' value='[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6].[BMI]' />
-            <map key='[Control]' value='[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6].[Control]' />
-            <map key='[Hemoglobina]' value='[data_hem.csv_FA311E0505EF428484F71004823D432C].[Hemoglobina]' />
-            <map key='[altitud]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[altitud]' />
-            <map key='[conglome]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[conglome]' />
-            <map key='[departamento_x]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[departamento_x]' />
-            <map key='[distrito_x]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[distrito_x]' />
-            <map key='[dominio]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[dominio]' />
-            <map key='[edad]' value='[data_hem.csv_FA311E0505EF428484F71004823D432C].[edad]' />
-            <map key='[etapa]' value='[data_hem.csv_FA311E0505EF428484F71004823D432C].[etapa]' />
-            <map key='[id]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[id]' />
-            <map key='[index_ (data_factor_sexo.csv)]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[index_]' />
-            <map key='[index_ (data_hem.csv)]' value='[data_hem.csv_FA311E0505EF428484F71004823D432C].[index_]' />
-            <map key='[index_]' value='[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6].[index_]' />
-            <map key='[pais]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[pais]' />
-            <map key='[provincia_x]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[provincia_x]' />
-            <map key='[res_final]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[res_final]' />
-            <map key='[res_hb]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[res_hb]' />
-            <map key='[res_peso]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[res_peso]' />
-            <map key='[res_talla]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[res_talla]' />
-            <map key='[sexo (data_factor_sexo.csv)]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[sexo]' />
-            <map key='[sexo (data_hem.csv)]' value='[data_hem.csv_FA311E0505EF428484F71004823D432C].[sexo]' />
-            <map key='[sexo]' value='[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6].[sexo]' />
-            <map key='[vivienda]' value='[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366].[vivienda]' />
-          </cols>
-          <refresh increment-key='' incremental-updates='false'>
-            <refresh-event add-from-file-path='data__gen_factor' increment-value='%null%' refresh-type='create' rows-inserted='4222' timestamp-start='2023-07-11 19:32:47.977' />
-          </refresh>
-          <metadata-records>
-            <metadata-record class='column'>
-              <remote-name>index_</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[index_]</local-name>
-              <parent-name>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</parent-name>
-              <remote-alias>index_</remote-alias>
-              <ordinal>0</ordinal>
-              <family>modified_data_scatter.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>511</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Amamantado</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Amamantado]</local-name>
-              <parent-name>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</parent-name>
-              <remote-alias>Amamantado</remote-alias>
-              <ordinal>1</ordinal>
-              <family>modified_data_scatter.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>sexo</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[sexo]</local-name>
-              <parent-name>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</parent-name>
-              <remote-alias>sexo</remote-alias>
-              <ordinal>2</ordinal>
-              <family>modified_data_scatter.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Control</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[Control]</local-name>
-              <parent-name>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</parent-name>
-              <remote-alias>Control</remote-alias>
-              <ordinal>3</ordinal>
-              <family>modified_data_scatter.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>8</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>BMI</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[BMI]</local-name>
-              <parent-name>[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]</parent-name>
-              <remote-alias>BMI</remote-alias>
-              <ordinal>4</ordinal>
-              <family>modified_data_scatter.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>1821</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>conglome</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[conglome]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>conglome</remote-alias>
-              <ordinal>5</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>303</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>vivienda</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[vivienda]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>vivienda</remote-alias>
-              <ordinal>6</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>171</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>id</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[id]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>id</remote-alias>
-              <ordinal>7</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>13</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>altitud</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[altitud]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>altitud</remote-alias>
-              <ordinal>8</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>195</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>sexo</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[sexo (data_factor_sexo.csv)]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>sexo</remote-alias>
-              <ordinal>9</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>departamento_x</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[departamento_x]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>departamento_x</remote-alias>
-              <ordinal>10</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>25</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>provincia_x</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[provincia_x]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>provincia_x</remote-alias>
-              <ordinal>11</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>111</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>distrito_x</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[distrito_x]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>distrito_x</remote-alias>
-              <ordinal>12</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>222</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>res_peso</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[res_peso]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>res_peso</remote-alias>
-              <ordinal>13</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>1</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>res_talla</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[res_talla]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>res_talla</remote-alias>
-              <ordinal>14</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>1</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>res_hb</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[res_hb]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>res_hb</remote-alias>
-              <ordinal>15</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>1</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>res_final</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[res_final]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>res_final</remote-alias>
-              <ordinal>16</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>dominio</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[dominio]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>dominio</remote-alias>
-              <ordinal>17</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>3</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Area_Type</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Area_Type]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>Area_Type</remote-alias>
-              <ordinal>18</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>pais</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[pais]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>pais</remote-alias>
-              <ordinal>19</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>1</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>index_</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[index_ (data_factor_sexo.csv)]</local-name>
-              <parent-name>[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]</parent-name>
-              <remote-alias>index_</remote-alias>
-              <ordinal>20</ordinal>
-              <family>data_factor_sexo.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>461</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>index_</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[index_ (data_hem.csv)]</local-name>
-              <parent-name>[data_hem.csv_FA311E0505EF428484F71004823D432C]</parent-name>
-              <remote-alias>index_</remote-alias>
-              <ordinal>21</ordinal>
-              <family>data_hem.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>73</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>edad</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[edad]</local-name>
-              <parent-name>[data_hem.csv_FA311E0505EF428484F71004823D432C]</parent-name>
-              <remote-alias>edad</remote-alias>
-              <ordinal>22</ordinal>
-              <family>data_hem.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>16</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Hemoglobina</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[Hemoglobina]</local-name>
-              <parent-name>[data_hem.csv_FA311E0505EF428484F71004823D432C]</parent-name>
-              <remote-alias>Hemoglobina</remote-alias>
-              <ordinal>23</ordinal>
-              <family>data_hem.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>44</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>sexo</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[sexo (data_hem.csv)]</local-name>
-              <parent-name>[data_hem.csv_FA311E0505EF428484F71004823D432C]</parent-name>
-              <remote-alias>sexo</remote-alias>
-              <ordinal>24</ordinal>
-              <family>data_hem.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>etapa</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[etapa]</local-name>
-              <parent-name>[data_hem.csv_FA311E0505EF428484F71004823D432C]</parent-name>
-              <remote-alias>etapa</remote-alias>
-              <ordinal>25</ordinal>
-              <family>data_hem.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-          </metadata-records>
-        </connection>
-      </extract>
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-        <objects>
-          <object caption='data_factor_sexo.csv' id='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366'>
-            <properties context=''>
-              <relation connection='textscan.1px31s30qmrr901d9srj41gebml4' name='data_factor_sexo.csv' table='[data_factor_sexo#csv]' type='table'>
-                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-                  <column datatype='integer' name='conglome' ordinal='0' />
-                  <column datatype='integer' name='vivienda' ordinal='1' />
-                  <column datatype='integer' name='id' ordinal='2' />
-                  <column datatype='integer' name='altitud' ordinal='3' />
-                  <column datatype='string' name='sexo' ordinal='4' />
-                  <column datatype='string' name='departamento_x' ordinal='5' />
-                  <column datatype='string' name='provincia_x' ordinal='6' />
-                  <column datatype='string' name='distrito_x' ordinal='7' />
-                  <column datatype='integer' name='res_peso' ordinal='8' />
-                  <column datatype='integer' name='res_talla' ordinal='9' />
-                  <column datatype='integer' name='res_hb' ordinal='10' />
-                  <column datatype='integer' name='res_final' ordinal='11' />
-                  <column datatype='string' name='dominio' ordinal='12' />
-                  <column datatype='string' name='Area_Type' ordinal='13' />
-                  <column datatype='string' name='pais' ordinal='14' />
-                  <column datatype='string' name='index_' ordinal='15' />
-                </columns>
-              </relation>
-            </properties>
-            <properties context='extract'>
-              <relation name='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366' table='[Extract].[data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366]' type='table' />
-            </properties>
-          </object>
-          <object caption='data_hem.csv' id='data_hem.csv_FA311E0505EF428484F71004823D432C'>
-            <properties context=''>
-              <relation connection='textscan.1px31s30qmrr901d9srj41gebml4' name='data_hem.csv' table='[data_hem#csv]' type='table'>
-                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-                  <column datatype='string' name='index_' ordinal='0' />
-                  <column datatype='integer' name='edad' ordinal='1' />
-                  <column datatype='real' name='Hemoglobina' ordinal='2' />
-                  <column datatype='string' name='sexo' ordinal='3' />
-                  <column datatype='string' name='etapa' ordinal='4' />
-                </columns>
-              </relation>
-            </properties>
-            <properties context='extract'>
-              <relation name='data_hem.csv_FA311E0505EF428484F71004823D432C' table='[Extract].[data_hem.csv_FA311E0505EF428484F71004823D432C]' type='table' />
-            </properties>
-          </object>
-          <object caption='modified_data_scatter.csv' id='modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6'>
-            <properties context=''>
-              <relation connection='textscan.0ot9wdj045svt317oip2s1h811jv' name='modified_data_scatter.csv' table='[modified_data_scatter#csv]' type='table'>
-                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-                  <column datatype='string' name='index_' ordinal='0' />
-                  <column datatype='string' name='Amamantado' ordinal='1' />
-                  <column datatype='string' name='sexo' ordinal='2' />
-                  <column datatype='integer' name='Control' ordinal='3' />
-                  <column datatype='real' name='BMI' ordinal='4' />
-                </columns>
-              </relation>
-            </properties>
-            <properties context='extract'>
-              <relation name='modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6' table='[Extract].[modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6]' type='table' />
-            </properties>
-          </object>
-        </objects>
-        <relationships>
-          <relationship>
-            <expression op='='>
-              <expression op='[index_]' />
-              <expression op='[index_ (data_factor_sexo.csv)]' />
-            </expression>
-            <first-end-point object-id='modified_data_scatter.csv_3615B898CBD5428796BBF3C736CBA5B6' />
-            <second-end-point object-id='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366' />
-          </relationship>
-          <relationship>
-            <expression op='='>
-              <expression op='[index_ (data_factor_sexo.csv)]' />
-              <expression op='[index_ (data_hem.csv)]' />
-            </expression>
-            <first-end-point object-id='data_factor_sexo.csv_BA1E879EC36A4D069E2D7CA6EEBC2366' />
-            <second-end-point object-id='data_hem.csv_FA311E0505EF428484F71004823D432C' />
-          </relationship>
-        </relationships>
-      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    </datasource>
   </datasources>
   <mapsources>
     <mapsource name='Tableau' />
   </mapsources>
   <actions>
-    <action caption='Filter 1 (generated)' name='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]'>
+    <action caption='Filter 1 (generated)' name='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]'>
       <activation auto-clear='true' type='on-select' />
-      <source dashboard='Dashboard 1' type='sheet' worksheet='Sheet 1' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Sheet 3' />
       <command command='tsc:tsl-filter'>
         <param name='special-fields' value='all' />
         <param name='target' value='Dashboard 1' />
@@ -3599,7 +3630,17 @@
             <column-instance column='[departamento_x]' derivation='Count' name='[cnt:departamento_x:qk]' pivot='key' type='quantitative' />
             <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Area_Type]' derivation='None' name='[none:Area_Type:nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -3655,10 +3696,21 @@
             <column caption='Cumple Necesidad' datatype='string' name='[CumpleNecesidad]' role='dimension' type='nominal' />
             <column caption='Estado nutricional' datatype='string' name='[Estado_nutricional]' role='dimension' type='nominal' />
             <column-instance column='[index_ (data_necesidades.csv)]' derivation='CountD' name='[ctd:index_ (data_necesidades.csv):qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Index  (Data Necesidades.Csv)' datatype='string' name='[index_ (data_necesidades.csv)]' role='dimension' type='nominal' />
             <column-instance column='[CumpleNecesidad]' derivation='None' name='[none:CumpleNecesidad:nk]' pivot='key' type='nominal' />
             <column-instance column='[Estado_nutricional]' derivation='None' name='[none:Estado_nutricional:nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -3763,11 +3815,19 @@
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
             <column caption='Anemia1' datatype='string' name='[Anemia]' role='dimension' type='nominal' />
             <column-instance column='[index_ (merged_seguro_anemia.csv)]' derivation='Count' name='[cnt:index_ (merged_seguro_anemia.csv):qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Index  (Merged Seguro Anemia.Csv)' datatype='string' name='[index_ (merged_seguro_anemia.csv)]' role='dimension' type='nominal' />
             <column-instance column='[Anemia]' derivation='None' name='[none:Anemia:nk]' pivot='key' type='nominal' />
             <column-instance column='[p209]' derivation='None' name='[none:p209:nk]' pivot='key' type='nominal' />
             <column caption='P209' datatype='string' name='[p209]' role='dimension' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
+          </filter>
           <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Exclusions (Anemia1,P209)]'>
             <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
               <groupfilter function='crossjoin'>
@@ -3817,6 +3877,7 @@
             <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Exclusions (Anemia1,P209)]</column>
             <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[none:p209:nk]</column>
             <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[none:Anemia:nk]</column>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -3869,17 +3930,21 @@
             <mapsource name='Tableau' />
           </mapsources>
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
-            <column caption='Zona' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
             <column-instance column='[index_]' derivation='Count' name='[cnt:index_:qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Index' datatype='string' name='[index_]' role='dimension' type='nominal' />
             <column-instance column='[sexo]' derivation='None' name='[none:sexo:nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column caption='Sexo' datatype='string' name='[sexo]' role='dimension' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]'>
-            <groupfilter function='level-members' level='[Area_Type]' user:ui-action-filter='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
           </filter>
           <slices>
-            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]</column>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -3961,7 +4026,6 @@
             <mapsource name='Tableau' />
           </mapsources>
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
-            <column caption='Zona' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
             <column-instance column='[index_]' derivation='Count' name='[cnt:index_:qk]' pivot='key' type='quantitative' />
             <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Index' datatype='string' name='[index_]' role='dimension' type='nominal' />
@@ -3969,12 +4033,6 @@
             <column-instance column='[pais]' derivation='None' name='[none:pais:nk]' pivot='key' type='nominal' />
             <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]'>
-            <groupfilter function='level-members' level='[Area_Type]' user:ui-action-filter='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]' user:ui-enumeration='all' user:ui-marker='enumerate' />
-          </filter>
-          <slices>
-            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]</column>
-          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -4103,20 +4161,24 @@
           </datasources>
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
             <column caption='Amamantado (modified data scatter.csv)' datatype='string' name='[Amamantado (modified_data_scatter.csv)]' role='dimension' type='nominal' />
-            <column caption='Zona' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
             <column datatype='real' name='[BMI]' role='measure' type='quantitative' />
             <column datatype='integer' name='[Control]' role='measure' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Amamantado (modified_data_scatter.csv)]' derivation='None' name='[none:Amamantado (modified_data_scatter.csv):nk]' pivot='key' type='nominal' />
             <column-instance column='[BMI]' derivation='None' name='[none:BMI:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Control]' derivation='None' name='[none:Control:qk]' pivot='key' type='quantitative' />
             <column-instance column='[sexo (modified_data_scatter.csv)]' derivation='None' name='[none:sexo (modified_data_scatter.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column caption='Sexo (Modified Data Scatter.Csv)' datatype='string' name='[sexo (modified_data_scatter.csv)]' role='dimension' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]'>
-            <groupfilter function='level-members' level='[Area_Type]' user:ui-action-filter='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
           </filter>
           <slices>
-            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]</column>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -4176,16 +4238,20 @@
             <datasource caption='data_factor_sexo' name='federated.1wf3gnq1miaxzk15qzrm40laz0bn' />
           </datasources>
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
-            <column caption='Zona' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
             <column datatype='real' name='[Hemoglobina]' role='measure' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Etapa' datatype='string' name='[etapa]' role='dimension' type='nominal' />
             <column-instance column='[Hemoglobina]' derivation='None' name='[none:Hemoglobina:qk]' pivot='key' type='quantitative' />
             <column-instance column='[etapa]' derivation='None' name='[none:etapa:nk]' pivot='key' type='nominal' />
             <column-instance column='[sexo (data_hem.csv)]' derivation='None' name='[none:sexo (data_hem.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column caption='Sexo (Data Hem.Csv)' datatype='string' name='[sexo (data_hem.csv)]' role='dimension' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]'>
-            <groupfilter function='level-members' level='[Area_Type]' user:ui-action-filter='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Exclusions (Etapa,Hemoglobina,Sexo (Data Hem.Csv))]'>
             <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
@@ -4212,7 +4278,7 @@
           </filter>
           <slices>
             <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Exclusions (Etapa,Hemoglobina,Sexo (Data Hem.Csv))]</column>
-            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]</column>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -4256,8 +4322,19 @@
           </datasources>
           <datasource-dependencies datasource='federated.0578rb91lnzj9b1choacu03mmvhe'>
             <column-instance column='[edad]' derivation='Avg' name='[avg:edad:qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' type='nominal' />
             <column caption='Edad' datatype='integer' name='[edad]' role='measure' type='quantitative' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.0578rb91lnzj9b1choacu03mmvhe].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0578rb91lnzj9b1choacu03mmvhe].[Action (Departamento X,Pais)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -4297,15 +4374,19 @@
             <datasource caption='data_factor_sexo' name='federated.1wf3gnq1miaxzk15qzrm40laz0bn' />
           </datasources>
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
-            <column caption='Zona' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
             <column-instance column='[index_]' derivation='CountD' name='[ctd:index_:qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Index' datatype='string' name='[index_]' role='dimension' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]'>
-            <groupfilter function='level-members' level='[Area_Type]' user:ui-action-filter='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
           </filter>
           <slices>
-            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]</column>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -4361,10 +4442,21 @@
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
             <column caption='Anemia en los últimos 12 meses' datatype='string' name='[anemia]' role='dimension' type='nominal' />
             <column-instance column='[anemia]' derivation='Count' name='[cnt:anemia:qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[anemia]' derivation='None' name='[none:anemia:nk]' pivot='key' type='nominal' />
             <column-instance column='[suplementos]' derivation='None' name='[none:suplementos:nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column caption='Suplementos' datatype='string' name='[suplementos]' role='dimension' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -4538,8 +4630,8 @@
           </layout-options>
           <size maxheight='2350' minheight='2350' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='48' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='47' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='50' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='49' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone h='5250' id='36' type-v2='title' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />

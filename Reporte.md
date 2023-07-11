@@ -329,8 +329,15 @@ RESULTADOFINALDELAENCUESTA INT| |1: Completa<br>2: Incompleta<br> 3: Rechazo <br
 
 ### Load
 
+El proceso seguido para la construcción del data pipepline fue el siguiente.
+
 ![](PIPELINE.png)
 
+Cabe resaltar que al llevar las tablas a postgres, se eliminaron 2 denominadas "prendas" pues no eran relevantes al estudio.
+
+Se almacenaron entonces 10 tablas o relaciones conectadas bajo el siguiente diagrama:
+
+![](DIAGRAMA_bd.jpg)
 
 
 ### Transform
@@ -420,13 +427,55 @@ A resaltar:
 
 Se puede encontrar el archivo en la nube en el siguiente link:
 
+https://public.tableau.com/app/profile/camila.rosa.rodriguez.valverde/viz/Book1_16891079231410/Dashboard1?publish=yes
 
 
-## 3. Insights
-Explica aquí qué insights interesantes has encontrado a través del análisis computacional de los datos.
+# 3. Insights
+
+- A pesar de la variabilidad en las respuestas, una minoría absoluta indicó una respuesta negativa respecto a la lactancia materna.
+
+- Se observó que los niños que no fueron amamantados presentaban un índice de masa corporal (BMI) menor.
+
+- Los datos rastreables existentes se limitan a infantes de peso bajo y normal.
+
+- Independientemente del departamento o tipo de zona considerada, el seguro predominante entre la población encuestada es el Sistema Integral de Salud (SIS).
+
+- Contrariamente a las expectativas, los niveles promedio de hemoglobina resultaron ser mayores en infantes menores de un año.
+
+- El diagnóstico de anemia no altera la administración de suplementos alimenticios en los infantes.
 
 ## 4. Conclusiones
-Realiza aquí un análisis global de tu proyecto. Piensa en lo que has aprendido, los desafíos que has enfrentado y las soluciones que has encontrado. También puedes reflexionar sobre lo que estos resultados podrían significar en el contexto más amplio del problema que estás tratando de resolver.
+
+- La falta de concordancia entre los identificadores únicos y el número de observaciones para cada relación sobre la misma muestra sugiere que la ausencia de un informe técnico VIANEV para los años 2017-2018 podría deberse a las limitaciones en los datos proporcionados por el equipo de encuestas.
+
+- Se subraya la necesidad de una clave única coherente al trabajar con múltiples relaciones.
+
+- Las principales complicaciones surgieron durante la integración de los datos.
+
+- Es vital que, en presencia de controles periódicos, se mantenga un seguimiento continuo de la familia para obtener resultados significativos.
+
+- Los indicadores no variaron significativamente según el departamento o la zona.
+
+
+## 4. Conclusiones
+
+- Debido a la gran discordancia de identificadores únicos y números de observaciones para cada relación sobre una misma muestra, se entiende que la falta de un informe técnico VIANEV para el 2017-2018 son debido a las limitantes de la data que proporcionó el equipo de encuestas.
+
+- Se reconoce la necesidade de una llave única congruente cuando se trabaja con múltiples relaciones.
+
+- Las complicaciones fueron principalmente debido a las integraciones de data.
+
+- Es necesario e importante que de haber controles periódicos se haga seguimiento continuo de la familia a fin de tener resultados resaltables.
+
+- Los indicadores no cambiaron de manera importante según departamento o zona.
+
 
 ## Referencias
-Si has utilizado fuentes externas para tu análisis, es importante citarlas aquí.
+
+Centro Nacional de Alimentación y Nutrición (2019). Informe técnico: Vigilancia alimentaria y nutricional de la población peruana menor de cinco años (VIANEV) 2019. https://web.ins.gob.pe/sites/default/files/Archivos/cenan/van/vigilacia_poblacion/Informe%20Tecnico%20%20VIANEV%20ni%C3%B1os%20menores%20de%205%20a%C3%B1os%202019.pdf
+
+20minutos (2021). ¿Cuáles son los valores normales de hemoglobina en niños? Recuperado de https://www.20minutos.es/salud/familia/cuales-son-los-valores-normales-de-hemoglobina-en-ninos-4824248/
+
+Braunstein, E. M. (2022). Evaluación de la anemia. En MSD Manuals. Recuperado de https://www.msdmanuals.com/es/professional/hematolog%C3%ADa-y-oncolog%C3%ADa/abordaje-del-paciente-con-anemia/evaluaci%C3%B3n-de-la-anemia
+
+CDC (2021). Acerca del índice de masa corporal para niños y adolescentes. Recuperado de https://www.cdc.gov/healthyweight/spanish/assessing/bmi/childrens_bmi/acerca_indice_masa_corporal_ninos_adolescentes.html
