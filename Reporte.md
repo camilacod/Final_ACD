@@ -461,12 +461,9 @@ https://public.tableau.com/app/profile/camila.rosa.rodriguez.valverde/viz/Book1_
 
 - Los indicadores no variaron significativamente según el departamento o la zona.
 
-
-## 4. Conclusiones
-
 - Debido a la gran discordancia de identificadores únicos y números de observaciones para cada relación sobre una misma muestra, se entiende que la falta de un informe técnico VIANEV para el 2017-2018 son debido a las limitantes de la data que proporcionó el equipo de encuestas.
 
-- Se reconoce la necesidade de una llave única congruente cuando se trabaja con múltiples relaciones.
+- Se reconoce la necesidad de una llave única congruente cuando se trabaja con múltiples relaciones.
 
 - Las complicaciones fueron principalmente debido a las integraciones de data.
 
