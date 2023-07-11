@@ -331,37 +331,94 @@ RESULTADOFINALDELAENCUESTA INT| |1: Completa<br>2: Incompleta<br> 3: Rechazo <br
 
 ![](PIPELINE.png)
 
-### Transform
-Explica aquí cada uno de los pasos de la transformación que realizaste, incluyendo las tareas de preprocesamiento y la eliminación de outliers. También puedes mencionar aquí si has creado un datamart y por qué.
 
-Preprocesamiento:
+
+### Transform
+
+A fin de poder crear el dashboard con las relaciones que se buscaban, se crearon 6 data marts. (subsets de la data warehouse).
+
+Se hizo la llamada mediante *psycopg2* al entorno de Python a la base de datos.
+
+Para lograr cada uno, se aplicaron los siguientes metodos de preprocesamiento de datos:
+
+- Data Integration:
+
+Se llevó a cabo la integración de los datos de diferentes bases de datos en Python utilizando la biblioteca psycopg2. Esto implicó combinar y unir los conjuntos de datos relevantes para crear un conjunto de datos consolidado y coherente que sería utilizado para construir el dashboard.
+
+- Data cleaning: 
+
+    - Nivel 1:Se realizaron las siguientes tareas de limpieza de datos:
+        - Nombres de columnas: Se verificaron los nombres de las columnas y se realizaron cambios si era necesario para asegurar la consistencia y la comprensión adecuada de los datos.
+        - Identificador único: Se verificó la presencia de un identificador único en las tablas y se aseguró de que cada registro tuviera un identificador único para evitar duplicados y errores en el análisis posterior.
+    
+    - Nivel 2: Se llevaron a cabo las siguientes tareas de limpieza de datos:
+        - Selección de atributos requeridos: Se identificaron los atributos necesarios para el análisis y se descartaron los atributos irrelevantes.
+        - Tipos de atributos: Se verificaron y se aseguró de que los tipos de datos de cada atributo fueran apropiados para su análisis.
+
+
+    - Nivel 3: Esta etapa fue opcional y se realizó si se detectaron valores faltantes (missing values) o valores atípicos (outliers) en los datos. Se aplicaron técnicas para manejar los valores faltantes, como la imputación de valores o la eliminación de registros incompletos. Además, se identificaron y se trataron los outliers para evitar que afectaran el análisis posterior.
+
+
+- Data Transformation.
+
+En esta etapa, se realizaron transformaciones en los datos para adecuarlos al formato requerido para su visualización en Tableau. Esto incluyó cambios en la estructura de las tablas, agregación de datos, creación de nuevas variables derivadas y cualquier otra transformación necesaria para facilitar el análisis y la creación de gráficos en Tableau. Estas transformaciones se llevaron a cabo tanto en Python como en Tableau, dependiendo de la complejidad de la tarea y las capacidades de cada herramienta.
+
+
+
+A continuacion se detallan los procesos resaltantes en medio de estas tareas de preprocesamiento:
 
 *1. Data integration*
 
-- Dimensionality data reduction
+- Se realizó un Dimensionality data reduction, enteramente en Python pero reduciendose las llamadas a las bases de datos a las columnas que se sabía someramente serían de interés.
 
-En Python
-
+- Se llamó a todas las tablas.
 
 *2. Data cleaning*
 - Data Cleaning Level 1
 
-    - Nombres de columnas
-    - Identificador unico
+    - Se tuvieron que hacer cambios en el formato de nombre en la mayoria de columnas.
+    - El identificador único que sirve como llave para Tableau se formó como un string de CONGLOME_VIVIENDA_ID.
 
 - Data Cleaning Level 2
-    - Que atributos se necesitan si o si.
-    - Tipos de atributos
+    - Luego de la primera seleccion de columnas previa a la integracion, aqui nos quedamos con las que servirian directamente.
+    - Se cambiaron los codigos numericos a valores descriptivos para las columnas categoricas.
 - Data Cleaning Level 3
-    - MV y Outliers
+    - Un análisis de missing values fue solo necesario para el caso de la table con Controles de talla y peso, donde se concluyó estos eran MCAR, además se verificó que para cada control el número de entrevistas realizadas coincidían con los registros de talla y peso,
 
 *3. Data Transformation*
+Se agregaron columnas como la de País al data mart 1 a fin de que Tableau la reconozca, se hicieron transformaciones de cálculo de BMI con el peso y talla, se categorizó luego al tipo de peso, además para el caso de necesidades, del encuestado tener más que el 50% de estas cubiertas se le categorizó como SI y menos de estas,No. Estas transformaciones sirvieron para poder realizar el análisis pertienente en tableau.
 
 
+*Nota: Los detalles de cada integracion junto a las otras tecnicas de procesamiento enfocadas a cada data mart se detallan en el archivo Transform.ipynb*
 
-En python y el mismo Tableau.
+Finalmente se tuvieron listos para tableau los siguientes 6 data marts:
+
+- 1. data_factor_sexo: integracion de data_001 y data_factor.
+
+- 2. merged_seguro_anemia: integracion de seguro_ps y data_anemia.
+
+- 3. data_necesidades: integracion de necesidades_100 y data_anemia.
+
+- 4. data_suplementos_anemia: integracion de data_anemia y data_sumplementos.
+
+- 5. data_modified_scatter: integracion de cred_peso_talla y data_alimentacion.
+
+- 6. data_hem: integracion de res_sin_id con data_001.
+
 
 ### Visualization 
+
+Los data marts fueron conectados a Tableau, donde se construyeron los graficos en distintas worksheets haciendo union entre las tablas de ser necesarios y cleaning nivel 1 en algunos casos especiales.
+
+![](tableau_grafico.png)
+
+A resaltar:
+
+- Para poder realizar el mapa, se tuvo que ingresar manualmente la latitud y longitud de algunos departamentos que Tableau no era capaz de reconocer.  Para esto se tuvo que cambiar el tipo de dato a dato geográfico y además retornar al preprocesamiento a incluir una columna con Peruú como pais.
+
+- Al existir diferencias en algunos ids perdidos ya que el tamaño de los datasets difiere, los filtros propios del dashboard tienen limitacion, en especifico con el boxplot.
+
+Se puede encontrar el archivo en la nube en el siguiente link:
 
 
 

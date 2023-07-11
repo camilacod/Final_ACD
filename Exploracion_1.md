@@ -475,17 +475,19 @@
     FALTA.
 
     4. Grouped Barplot  horizontal. Consume_suplementos (Si/No). Eje X: Anemia en los ultimos meses.
-    FALTA PREPROCESAMIENTO Y TABLEAU
+    LISTO
 
     5. Scatterplot. 8 controles. Control vs BMI. Sexo. Le dio pecho al ninhio
-    EN PROCESO LIMPIEZA
-    6. Box plot. Edad en 3 grupos. 36 meses. Hemoglobina. 
-    FALTA TODO
+   LISTO
+    6. Box plot. Edad en 3 grupos. 36 meses. Hemoglobina.  Listo.
+
+    No funciona bien con el dashboard
     7. Alimentacion?
     8. Altitud.
     TUVE LA IDEA.
     9. Educacion. 
     HAY UNA IDEA. QUE VARIABLES SE NECESITAN.
+    10. Seguro
 
 NINOS POR CASA
 ----
