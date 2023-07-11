@@ -1,5 +1,10 @@
-# Título del Proyecto
+# Proyecto Final: Perú, Estado Nutricional Infantil.
 
+- Oscar Chu
+
+- Camila Rodriguez.
+
+---
 # 1. Identificación del Problema
 
 ## Contexto 

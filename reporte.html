@@ -1,0 +1,1392 @@
+<h1>Proyecto Final: Perú, Estado Nutricional Infantil.</h1>
+<ul>
+<li>
+<p>Oscar Chu</p>
+</li>
+<li>
+<p>Camila Rodriguez.</p>
+</li>
+</ul>
+<hr>
+<h1>1. Identificación del Problema</h1>
+<h2>Contexto</h2>
+<p>Durante los años 2017 y 2018, se llevó a cabo la encuesta VIANEV (Vigilancia Alimentaria Nutricional por Etapas de Vida) en todo el territorio de Perú. Esta encuesta fue realizada tanto en zonas urbanas como rurales, específicamente en hogares con niños menores de 3 años.</p>
+<h2>Naturaleza de los datos</h2>
+<p>Los datos fueron recopilados mediante encuestas en dos fases:</p>
+<ul>
+<li>Primera fase: del 16 de octubre al 28 de diciembre de 2017.</li>
+<li>Segunda fase: del 26 de febrero al 13 de mayo de 2018.</li>
+</ul>
+<p>Estas encuestas estuvieron a cargo de la Dirección Ejecutiva de Vigilancia Alimentaria y Nutricional - Centro Nacional de Alimentación y Nutrición – Instituto Nacional de Salud (CENAN - INS). El objetivo principal de esta encuesta era describir el estado nutricional de los niños menores de 3 años en Perú.</p>
+<p>Las encuestas fueron conducidas por equipos compuestos por un supervisor de equipo, dos encuestadores nutricionistas, un encuestador bioquímico, cuatro profesionales para control de calidad, un jefe de campo, un apoyo administrativo y el equipo técnico de VIANEV compuesto por seis personas.</p>
+<p>Tras la recolección de los datos, se digitalizaron y verificaron en la interfaz de CENAN. Se realizaron controles de calidad para garantizar la consistencia de los datos, como la verificación de las fechas de nacimiento y que los sujetos de estudio cumplieran con el rango de edad establecido (menores de 35 meses), entre otros aspectos.</p>
+<p>Finalmente, los datos fueron publicados y están disponibles en: https://www.datosabiertos.gob.pe/dataset/encuesta-vianev-2017-2018-estado-nutricional-en-ni%C3%B1os-menores-de-3-a%C3%B1os-ins-cenan.</p>
+<p>El archivo descargado en formato ZIP contiene la siguiente estructura:</p>
+<ul>
+<li>Bases: 12 archivos Excel representando la base de datos titulada &quot;CAP&quot;+ 3 dígitos.</li>
+<li>Factor: Base de datos que presenta datos generales de las encuestas VIANEV y códigos de diferenciación. No se dispone de un diccionario para esta base de datos.</li>
+<li>Diccionarios: 12 archivos Excel que proporcionan interpretaciones a las columnas de las relaciones en las bases de datos mencionadas anteriormente.</li>
+</ul>
+<h2>Potencial e importancia del análisis a realizar</h2>
+<p>A diferencia de años anteriores, no se publicó un informe técnico con los resultados de la encuesta. Por tanto, surge la necesidad de realizar un análisis de los datos recolectados, con el objetivo de poner a disposición del público esta información. Si bien el objetivo original era describir el estado nutricional de los niños menores de 3 años, consideramos importante dar un enfoque adicional y concentrarse en los subgrupos de la población estudiada y en particular en la lucha contra la anemia, un problema de salud grave que afecta a un gran porcentaje de la población infantil en Perú.</p>
+<h2>Potenciales usuarios</h2>
+<p>El análisis de estos datos será de interés para el INS, la comunidad científica y el público en general interesado en conocer las relaciones entre las condiciones sociales, geográficas, de género, educativas y culturales de los niños y su estado nutricional. Especialmente relevante es la relación entre estos factores y la incidencia de la anemia en esta población.</p>
+<h2>2. Data Pipeline</h2>
+<h3><strong>Extract</strong></h3>
+<p>&lt;img src=&quot;DA.jfif&quot; alt=&quot;drawing&quot; width=&quot;200&quot;/&gt;
+&lt;img src=&quot;xl.png&quot; alt=&quot;drawing&quot; width=&quot;60&quot;/&gt;</p>
+<p>El dataset elegido consta de varios sub datasets que muestran la encuesta de Vigilancia Alimentaria y Nutricional en niños menores de 3 años en un periodo que consta de 2 fases, primera fase: 16 de octubre al 28 diciembre de 2017 Segunda fase: 26 de febrero al 13 de mayo de 2018. Su cobertura abarca todo el Perú y por dominios de residencia (Lima Metropolitana, zona urbana y rural).
+Esta data fue extraída de la página web de datos abierto del gobierno peruano de manera de descarga en formato .zip, diseñada para comunidad científica y público general.</p>
+<p><a href="https://www.datosabiertos.gob.pe/dataset/encuesta-vianev-2017-2018-estado-nutricional-en-ni%C3%B1os-menores-de-3-a%C3%B1os-ins-cenan">Datos Abiertos Dataset Link</a></p>
+<h2>Diccionario de los datasets</h2>
+<h3>&lt;span style=&quot;color:orange&quot;&gt;TABLE GENERAL_001&lt;/span&gt;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">HOGAR INT</td>
+<td style="text-align:center">Hogar</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ETAPA_VIDA INT</td>
+<td style="text-align:center">Etapa de vida</td>
+<td style="text-align:center">1: Niño &lt;br&gt; 2: Adolescente &lt;br&gt; 3: Adulto Mayor</td>
+</tr>
+<tr>
+<td style="text-align:left">ALTITUD INT</td>
+<td style="text-align:center">Altitud (msnm)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">SEXO INT</td>
+<td style="text-align:center">Sexo</td>
+<td style="text-align:center">1: Masculino &lt;br&gt; 2: Femenino</td>
+</tr>
+<tr>
+<td style="text-align:left">DEPARTAMENTO VARCHAR(255)</td>
+<td style="text-align:center">Departamento</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">CCPP VARCHAR(255)</td>
+<td style="text-align:center">Centro Poblado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">PROVINCIA VARCHAR(255)</td>
+<td style="text-align:center">Provincia</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">DISTRITO VARCHAR(255)</td>
+<td style="text-align:center">Distrito</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">RES_PESO INT</td>
+<td style="text-align:center">Resultado del Peso</td>
+<td style="text-align:center">1: Completo&lt;br&gt; 2: Ausente&lt;br&gt; 3: Rechazo&lt;br&gt; 4: No incluido</td>
+</tr>
+<tr>
+<td style="text-align:left">RES_TALLA INT</td>
+<td style="text-align:center">Resultado de la Talla</td>
+<td style="text-align:center">1: Completo&lt;br&gt; 2: Ausente&lt;br&gt; 3: Rechazo&lt;br&gt; 4: No incluido</td>
+</tr>
+<tr>
+<td style="text-align:left">RES_HB INT</td>
+<td style="text-align:center">Resultado de la Hemoglobina</td>
+<td style="text-align:center">1: Completo&lt;br&gt; 2: Ausente&lt;br&gt; 3: Rechazo&lt;br&gt; 4: No incluido</td>
+</tr>
+<tr>
+<td style="text-align:left">RES_FINAL INT</td>
+<td style="text-align:center">Resultado Final Encuesta Niño</td>
+<td style="text-align:center">1: Completa&lt;br&gt; 2: Incompleta&lt;br&gt; 3: Rechazo&lt;br&gt; 4: Ausente&lt;br&gt; 5: No se inicio entrevista&lt;br&gt; 6: Otro</td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3>&lt;span style=&quot;color:lime&quot;&gt;NECESIDADES_100&lt;/span&gt;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P101 INT</td>
+<td style="text-align:center">Tipo de vivienda</td>
+<td style="text-align:center">1: Casa independiente&lt;br&gt; 2: Departamento en edificio&lt;br&gt; 3: Vivienda en quinta&lt;br&gt; 4: Vivienda en casa de vecindad (callejón, solar o corralón)&lt;br&gt; 5: Choza o cabaña&lt;br&gt; 6: Vivienda improvisada&lt;br&gt; 7: Local no destinado para habitación humana&lt;br&gt; 8: Otro</td>
+</tr>
+<tr>
+<td style="text-align:left">P102 INT</td>
+<td style="text-align:center">¿Cuál es el material predominante en paredes exteriores?</td>
+<td style="text-align:center">1: Ladrillo o bloque de cemento&lt;br&gt; 2: Piedra o sillar con cal o cemento&lt;br&gt; 3: Adobe o tapia&lt;br&gt; 4: Quincha (caña con barro)&lt;br&gt; 5: Piedra con barro&lt;br&gt; 6: Madera&lt;br&gt; 7: Estera&lt;br&gt; 8: Otro&lt;br&gt; 9: Ninguno</td>
+</tr>
+<tr>
+<td style="text-align:left">P103 INT</td>
+<td style="text-align:center">¿Cuál es el material predominante en los techos de su vivienda?</td>
+<td style="text-align:center">1: Concreto armado&lt;br&gt; 2: Madera&lt;br&gt; 3: Tejas&lt;br&gt; 4: Planchas de calamina&lt;br&gt; fibra de cemento o similares&lt;br&gt; 5: Caña o esteras con tortas de barro&lt;br&gt; 6: Esteras&lt;br&gt; 7: Pajas, hojas de palmeras, etc.&lt;br&gt; 8: Cartón, plástico, tela&lt;br&gt; 9: Otro</td>
+</tr>
+<tr>
+<td style="text-align:left">P104 INT</td>
+<td style="text-align:center">¿Cuál es el material predominante de los pisos de su vivienda?</td>
+<td style="text-align:center">1: Parquet o madera pulida&lt;br&gt; 2: Láminas asfálticas, vinílicos o similares&lt;br&gt; 3: Losetas, terrazos o similares&lt;br&gt; 4: Madera (entablados)&lt;br&gt; 5: Cemento / Falso piso &lt;br&gt; 6: Tierra / Arena / Ripio&lt;br&gt; 7: Otro</td>
+</tr>
+<tr>
+<td style="text-align:left">P105 INT</td>
+<td style="text-align:center">El abastecimiento de agua en su hogar habitualmente procede de:</td>
+<td style="text-align:center">1: Red pública dentro de la vivienda&lt;br&gt; 2: Red pública fuera de la vivienda&lt;br&gt; 3: Pilón / Grifo público&lt;br&gt; 4: Pozo&lt;br&gt; 5: Río / Acequia / Manantial&lt;br&gt; 6: Camión tanque / Aguatero&lt;br&gt; 7: Otro</td>
+</tr>
+<tr>
+<td style="text-align:left">P106 INT</td>
+<td style="text-align:center">El servicio higiénico de su hogar está conectado a:</td>
+<td style="text-align:center">1: Red pública dentro de la vivienda&lt;br&gt; 2: Red pública fuera de la vivienda&lt;br&gt; 3: Pozo séptico&lt;br&gt; 4: Letrina (bajo pautas técnicas)&lt;br&gt; 5: Pozo ciego o negro / Silo (orificio simple)&lt;br&gt; 6: Río, acequia o canal&lt;br&gt; 7: Otro</td>
+</tr>
+<tr>
+<td style="text-align:left">P107 INT</td>
+<td style="text-align:center">¿Qué tipo de alumbrado tiene su hogar?</td>
+<td style="text-align:center">1: Electricidad&lt;br&gt; 2: Gas licuado (GLP)&lt;br&gt; 3: Gas natural (tubería)&lt;br&gt; 4: Kerosone&lt;br&gt; 5: Vela&lt;br&gt; 6: Batería&lt;br&gt; 7: Otro</td>
+</tr>
+<tr>
+<td style="text-align:left">P108 INT</td>
+<td style="text-align:center">Sin contar baño, cocina, pasadizos, ni garaje ¿Cuántas habitaciones son de uso de su hogar?</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P109 INT</td>
+<td style="text-align:center">¿Cuántas habitaciones usan en su hogar para dormir?</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P110 INT</td>
+<td style="text-align:center">¿Cuál es el combustible que utilizan más frecuentemente en su hogar para cocinar?</td>
+<td style="text-align:center">1: Electricidad&lt;br&gt; 2: Gas licuado (GLP)&lt;br&gt; 3: Gas natural (tubería)&lt;br&gt; 4: Kerosone&lt;br&gt; 5: Carbón&lt;br&gt; 6: Leña&lt;br&gt; 7: Paja / Arbusto / Hierba&lt;br&gt; 8: Bosta (estiércol de animal)&lt;br&gt; 9: Otro&lt;br&gt; 10: No cocina</td>
+</tr>
+<tr>
+<td style="text-align:left">P111 INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Teléfono fijo, teléfono celular, cable, etc.?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P112 INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Radio, televisor a color, computadora, etc.?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P113_BICICLETA INT</td>
+<td style="text-align:center">¿Algún miembro de su hogar tiene bicicleta / triciclo?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P113_MOTOCICLETA INT</td>
+<td style="text-align:center">¿Algún miembro de su hogar tiene motocicleta?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P113_P113_CARRO INT</td>
+<td style="text-align:center">¿Algún miembro de su hogar tiene carro?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P113_OTRO INT</td>
+<td style="text-align:center">¿Algún miembro de su hogar tiene otro medio de transporte?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P111_TEL_FIJO INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Teléfono fijo?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P111_TEL_CELULAR INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Teléfono celular?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P111_CABLE INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Cable?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P111_INTERNET INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Internet?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P112_RADIO INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Radio?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P112_TELEVISOR INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Televisor a color?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P112_COMPUTADORA INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Computadora?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P112_HORNO INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Horno microondas?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P112_LAVADORA INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Lavadora?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P112_COCINA INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Cocina a gas?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P112_PLANCHA INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Plancha?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">P112_EQUIPO INT</td>
+<td style="text-align:center">¿Tiene en su hogar: Equipo de música?</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS</td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">FOREIGN KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID) REFERENCES GENERAL_001 (CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3>&lt;span style=&quot;color:red&quot;&gt;TABLE SEGURO_PS&lt;/span&gt;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P209 FLOAT</td>
+<td style="text-align:center">Seguro de salud</td>
+<td style="text-align:center">1: EsSalud&lt;br&gt; 2: FFAA&lt;br&gt; 3: SIS&lt;br&gt; 4: Entidad Prestadora Salud EPS&lt;br&gt; 5: Seguro Privado&lt;br&gt; 6: No tiene&lt;br&gt; 7: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">P210_PSOC_01 FLOAT</td>
+<td style="text-align:center">Programas Sociales 1</td>
+<td style="text-align:center">1: Cuna Más&lt;br&gt; 2: Vaso de leche&lt;br&gt; 3: Qali Warma&lt;br&gt; 4: Juntos&lt;br&gt; 5: Pensión 65&lt;br&gt; 6: Vuelve a sonreir&lt;br&gt; 7: Tayta Wasi&lt;br&gt; 8: Otros programas&lt;br&gt; 9: Ninguno&lt;br&gt; 10: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">FOREIGN KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID) REFERENCES GENERAL_001 (CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3>&lt;span style=&quot;color:Blueviolet&quot;&gt;TABLE MICRONUTRIENTES_300&lt;/span&gt;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P313_1_CONSUME_MMN INT</td>
+<td style="text-align:center">Actualmente el niño consume Multimicronutrientes</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">FOREIGN KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID) REFERENCES GENERAL_001 (CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3>&lt;span style=&quot;color:Cornflowerblue&quot;&gt;TABLE SUPLEMENTOS_300&lt;/span&gt;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P314_CONSUME_SUPL INT</td>
+<td style="text-align:center">Actualmente el niño consume Suplemento de hierro</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P314_OBTUVO_SUPL FLOAT</td>
+<td style="text-align:center">Cómo obtuvo Suplemento de hierro</td>
+<td style="text-align:center">1: Comprado&lt;br&gt; 2: Donado</td>
+</tr>
+<tr>
+<td style="text-align:left">P314_PRESENTA_SUPL FLOAT</td>
+<td style="text-align:center">La presentación del Suplemento de hierro es:</td>
+<td style="text-align:center">1: Frasco&lt;br&gt; 2: Gotas</td>
+</tr>
+<tr>
+<td style="text-align:left">P314_AYER FLOAT</td>
+<td style="text-align:center">El día de ayer el niño consumió Suplemento de hierro</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P314_DIARIO FLOAT</td>
+<td style="text-align:center">En la última semana, cuántos días ha consumido Suplemento de hierro</td>
+<td style="text-align:center">1: Diario&lt;br&gt;</td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">FOREIGN KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID) REFERENCES GENERAL_001 (CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3>&lt;span style=&quot;color:Lightcyan&quot;&gt;TABLE ANEMIA_300&lt;/span&gt;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P306 INT</td>
+<td style="text-align:center">Señora para usted, ¿Qué es la anemia?</td>
+<td style="text-align:center">1: Es una enfermedad donde el niño se pone muy flaco&lt;br&gt; 2: Es una enfermedad en la que disminuye la hemoglobina de la sangre&lt;br&gt; 3: Es la deficiencia de vitaminas&lt;br&gt; 4: Es la deficiencia de calcio&lt;br&gt; 5: N/S o menciona una alternativa diferente a las anteriores&lt;br&gt; 6: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">P307 INT</td>
+<td style="text-align:center">Señora en los últimos 12 meses, algún personal de la salud le dijo que el niño tiene anemia</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">P311 INT</td>
+<td style="text-align:center">Señora en los últimos 12 meses al niño le han hecho análisis para saber si tiene anemia</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">P312 INT</td>
+<td style="text-align:center">Desde que nació el niño, cuántas veces se le ha realizado análisis para saber si tiene anemia</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P313 INT</td>
+<td style="text-align:center">Señora alguna vez el niño ha consumido Suplemento de hierro</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">P320 INT</td>
+<td style="text-align:center">Conoce usted, los alimentos ricos en hierro</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">FOREIGN KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID) REFERENCES GENERAL_001 (CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3>&lt;span style=&quot;color:Olivedrab&quot;&gt;TABLE CRED_PESO_TALLA&lt;/span&gt; :</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P325_PESO_NAC FLOAT</td>
+<td style="text-align:center">Peso al nacer</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_00 FLOAT</td>
+<td style="text-align:center">Control Recién Nacido / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_00 FLOAT</td>
+<td style="text-align:center">Control Recién Nacido / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_01 FLOAT</td>
+<td style="text-align:center">Control N°01 / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_01 FLOAT</td>
+<td style="text-align:center">Control N°01 / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_02 FLOAT</td>
+<td style="text-align:center">Control N°02 / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_02 FLOAT</td>
+<td style="text-align:center">Control N°02 / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_03 FLOAT</td>
+<td style="text-align:center">Control N°03 / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_03 FLOAT</td>
+<td style="text-align:center">Control N°03 / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_04 FLOAT</td>
+<td style="text-align:center">Control N°04 / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_04 FLOAT</td>
+<td style="text-align:center">Control N°04 / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_05 FLOAT</td>
+<td style="text-align:center">Control N°05 / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_05 FLOAT</td>
+<td style="text-align:center">Control N°05 / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_06 FLOAT</td>
+<td style="text-align:center">Control N°06 / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_06 FLOAT</td>
+<td style="text-align:center">Control N°06 / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_07 FLOAT</td>
+<td style="text-align:center">Control N°07 / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_07 FLOAT</td>
+<td style="text-align:center">Control N°07 / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_08 FLOAT</td>
+<td style="text-align:center">Control N°08 / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_08 FLOAT</td>
+<td style="text-align:center">Control N°08 / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_09 FLOAT</td>
+<td style="text-align:center">Control N°09 / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_09 FLOAT</td>
+<td style="text-align:center">Control N°09 / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_PESO_10 FLOAT</td>
+<td style="text-align:center">Control N°10 / Peso</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P327_TALLA_10 FLOAT</td>
+<td style="text-align:center">Control N°10 / Talla</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P331 FLOAT</td>
+<td style="text-align:center">En el último control CRED le explicaron sobre: Cómo es la alimentación de su niño según la edad</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">P332 FLOAT</td>
+<td style="text-align:center">En el último control CRED le explicaron sobre: Cómo dar las gotas de hierro o Multimicronutriente a su niño</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">P333 FLOAT</td>
+<td style="text-align:center">En el último control CRED le explicaron sobre: La importancia, conservación y las posibles molestias del Suplemento de hierro en su niño</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">P334 FLOAT</td>
+<td style="text-align:center">En el último control CRED le explicaron sobre: Cuáles son alimentos ricos en hierro</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No&lt;br&gt; 3: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">FOREIGN KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID) REFERENCES GENERAL_001 (CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3>&lt;span style=&quot;color:Palegoldenrod&quot;&gt;TABLE CRED_PESO_TALLA&lt;/span&gt; :</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P336 INT</td>
+<td style="text-align:center">Ha participado en una reunión de madres, donde el personal de salud preparaba alimentos con la finalidad de enseñarle</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P337 FLOAT</td>
+<td style="text-align:center">Cuántas veces el personal de salud le ha enseñado a preparar los alimentos para el niño</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P338 FLOAT</td>
+<td style="text-align:center">La última vez que asistió a una sesión demostrativa: Le enseñaron a preparar comidas espesas o segundo según la edad del niño</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P339 FLOAT</td>
+<td style="text-align:center">La última vez que asistió a una sesión demostrativa: Le enseñaron según la edad de su niño, qué cantidad y cuándo debe de comer</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P340 FLOAT</td>
+<td style="text-align:center">La última vez que asistió a una sesión demostrativa: Le enseñaron que su niño coma alimentos de origen animal ricos en hierro todos los días</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P341 FLOAT</td>
+<td style="text-align:center">La última vez que asistió a una sesión demostrativa: Le enseñaron que las preparaciones para su niño se acompañe con verduras y frutas de color</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P342 FLOAT</td>
+<td style="text-align:center">La última vez que asistió a una sesión demostrativa: Le enseñaron a incluir menestras en sus preparaciones</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P343 FLOAT</td>
+<td style="text-align:center">En la última semana, le han preparado al niño alguna comida que le enseñaron en la sesión demostrativa</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P344 FLOAT</td>
+<td style="text-align:center">Por qué motivo no han preparado alguna comida que le enseñaron en la sesión demostrativa</td>
+<td style="text-align:center">1: No le gusta al niño&lt;br&gt; 2: Son muy costosas&lt;br&gt; 3: No puede obtener los ingredientes&lt;br&gt; 4: Otro&lt;br&gt; 5: NS/NR</td>
+</tr>
+<tr>
+<td style="text-align:left">P345_TIEMPO VARCHAR</td>
+<td style="text-align:center">Hace cuánto tiempo acudió al establecimiento de salud / Tiempo</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P345_MESES FLOAT</td>
+<td style="text-align:center">Hace cuánto tiempo acudió al establecimiento de salud / Meses</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P345_DIAS FLOAT</td>
+<td style="text-align:center">Hace cuánto tiempo acudió al establecimiento de salud / Días</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P346 FLOAT</td>
+<td style="text-align:center">En esa oportunidad, el personal de salud le enseñó a usted junto a otras personas sobre algún tema para que su niño este sanito</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P347 FLOAT</td>
+<td style="text-align:center">Tema que le enseñó el personal de salud en esa ocasión: Lactancia materna</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P348 FLOAT</td>
+<td style="text-align:center">Tema que le enseñó el personal de salud en esa ocasión: Alimentación complementaria</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P349 FLOAT</td>
+<td style="text-align:center">Tema que le enseñó el personal de salud en esa ocasión: Suplementación con Multimicronutrientes</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P350 FLOAT</td>
+<td style="text-align:center">Tema que le enseñó el personal de salud en esa ocasión: Lactancia materna prolongada</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P351 FLOAT</td>
+<td style="text-align:center">Tema que le enseñó el personal de salud en esa ocasión: Anemia</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P352 FLOAT</td>
+<td style="text-align:center">Tema que le enseñó el personal de salud en esa ocasión: Desnutrición crónica</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">FOREIGN KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID) REFERENCES GENERAL_001 (CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3>&lt;span style=&quot;color:Pink&quot;&gt;TABLE ALIMENTACION_300&lt;/span&gt;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P367 INT</td>
+<td style="text-align:center">Le dio pecho (leche materna) al niño</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P368_TIEMPO FLOAT</td>
+<td style="text-align:center">Después que nació el niño empezó recibir leche materna / Tiempo</td>
+<td style="text-align:center">1: Inmediatamente&lt;br&gt; 2: Horas&lt;br&gt; 3: Días</td>
+</tr>
+<tr>
+<td style="text-align:left">P368_HORAS FLOAT</td>
+<td style="text-align:center">Después que nació el niño empezó recibir leche materna / Horas</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P368_DIAS FLOAT</td>
+<td style="text-align:center">Después que nació el niño empezó recibir leche materna / Dias</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P369 FLOAT</td>
+<td style="text-align:center">Aún le está dando leche materna al niño</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P370_MESES FLOAT</td>
+<td style="text-align:center">Durante cuántos meses le dio usted leche materna al niño / Meses</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P370_NS FLOAT</td>
+<td style="text-align:center">Durante cuántos meses le dio usted leche materna al niño / NS/NR</td>
+<td style="text-align:center">1: No sabe</td>
+</tr>
+<tr>
+<td style="text-align:left">P371 INT</td>
+<td style="text-align:center">Tipos de líquidos que el niño bebió ayer durante el día y la noche</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P371_AGUA INT</td>
+<td style="text-align:center">Le dió usted ayer: Agua sola</td>
+<td style="text-align:center">1: Si &lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P371_FORMULA INT</td>
+<td style="text-align:center">Le dió usted ayer: Fórmula infantil</td>
+<td style="text-align:center">1: Si &lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P371_LECHE_ENVASADA INT</td>
+<td style="text-align:center">Le dió usted ayer: Leche envasada</td>
+<td style="text-align:center">1: Si &lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P371_LECHE_VACA INT</td>
+<td style="text-align:center">Le dió usted ayer: Leche de vaca o cualquier otra leche</td>
+<td style="text-align:center">1: Si &lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P371_JUGO INT</td>
+<td style="text-align:center">Le dió usted ayer: Jugo de fruta</td>
+<td style="text-align:center">1: Si &lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P371_OTRO INT</td>
+<td style="text-align:center">Le dió usted ayer: Algún otro líquido (agua azucarada, te, café, refresco)</td>
+<td style="text-align:center">1: Si &lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P371_CALDOS INT</td>
+<td style="text-align:center">Le dió usted ayer: Caldos</td>
+<td style="text-align:center">1: Si &lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P371_NINGUNO INT</td>
+<td style="text-align:center">Le dió usted ayer: Ninguno</td>
+<td style="text-align:center">1: Si &lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">FOREIGN KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID) REFERENCES GENERAL_001 (CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3>&lt;span style=&quot;color:Plum&quot;&gt;TABLE RES_SIN_ID_400&lt;/span&gt;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P400 INT</td>
+<td style="text-align:center">Nació algún niño/niña después de la entrevista realizada por las encuestadoras del INEI</td>
+<td style="text-align:center">1: Sí&lt;br&gt; 2: No</td>
+</tr>
+<tr>
+<td style="text-align:left">P402 INT</td>
+<td style="text-align:center">Sexo</td>
+<td style="text-align:center">1: Masculino&lt;br&gt; 2: Femenino</td>
+</tr>
+<tr>
+<td style="text-align:left">P408_EDAD INT</td>
+<td style="text-align:center">Edad en meses</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P408_AÑOS FLOAT</td>
+<td style="text-align:center">Edad / Años</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P408_MESES INT</td>
+<td style="text-align:center">Edad / Meses</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P409 FLOAT</td>
+<td style="text-align:center">Peso bruto (kilogramos)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P410 FLOAT</td>
+<td style="text-align:center">Peso Neto (kilogramos)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P411 FLOAT</td>
+<td style="text-align:center">Prenda / Peso total (kilogramos)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P412 FLOAT</td>
+<td style="text-align:center">Talla (centímetros)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P413 FLOAT</td>
+<td style="text-align:center">Posición de la medición</td>
+<td style="text-align:center">1: Parado&lt;br&gt; 2: Echado</td>
+</tr>
+<tr>
+<td style="text-align:left">P415 FLOAT</td>
+<td style="text-align:center">Hemoglobina (g/dl)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">P416_RES_PESO INT</td>
+<td style="text-align:center">Resultado de la antropometría / Peso</td>
+<td style="text-align:center">1: Completo&lt;br&gt; 2: Ausente&lt;br&gt; 3: Rechazo&lt;br&gt; 4: No incluido,</td>
+</tr>
+<tr>
+<td style="text-align:left">P416_RES_TALLA INT</td>
+<td style="text-align:center">Resultado de la antropometría / Talla</td>
+<td style="text-align:center">1: Completo&lt;br&gt; 2: Ausente&lt;br&gt; 3: Rechazo&lt;br&gt; 4: No incluido,</td>
+</tr>
+<tr>
+<td style="text-align:left">P416_RES_HB INT</td>
+<td style="text-align:center">Resultado de la antropometría / Hemoglobina</td>
+<td style="text-align:center">1: Completo&lt;br&gt; 2: Ausente&lt;br&gt; 3: Rechazo&lt;br&gt; 4: No incluido,</td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">FOREIGN KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID) REFERENCES GENERAL_001 (CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3>&lt;span style=&quot;color:Hotpink&quot;&gt;TABLE FACTOR_ZONA&lt;/span&gt;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Significado</th>
+<th style="text-align:center">Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONGLOME INT</td>
+<td style="text-align:center">Conglomerado</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">VIVIENDA INT</td>
+<td style="text-align:center">Vivienda</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ID CHAR(4)</td>
+<td style="text-align:center">ID del niño</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">COD_DOMINIO BIGINT</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">DOMINIO VARCHAR(255)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">COD_ETAPADEVIDA BIGINT</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">ETAPADEVIDA VARCHAR(255)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">RESULTADOFINALDELAENCUESTA INT</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1: Completa&lt;br&gt;2: Incompleta&lt;br&gt; 3: Rechazo &lt;br&gt; 6: Otros</td>
+</tr>
+<tr>
+<td style="text-align:left">UBIGEO BIGINT</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">DEPARTAMENTO VARCHAR(255)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">PROVINCIA VARCHAR(255)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">DISTRITO VARCHAR(255)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">PRIMARY KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">FOREIGN KEY</td>
+<td style="text-align:center">(CONGLOME, VIVIENDA, ID) REFERENCES GENERAL_001 (CONGLOME, VIVIENDA, ID)</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h2>Tamaño de los datasets</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Dataset</th>
+<th style="text-align:center">Size before</th>
+<th style="text-align:right">Size after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:orange&quot;&gt;TABLE GENERAL_001&lt;/span&gt;</td>
+<td style="text-align:center">(713,80)</td>
+<td style="text-align:right">(713,15)</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:lime&quot;&gt;NECESIDADES_100&lt;/span&gt;</td>
+<td style="text-align:center">(314,48)</td>
+<td style="text-align:right">(314,32)</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:red&quot;&gt;TABLE SEGURO_PS&lt;/span&gt;</td>
+<td style="text-align:center">(1912,18)</td>
+<td style="text-align:right">(314,4)</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:Blueviolet&quot;&gt;TABLE MICRONUTRIENTES_300&lt;/span&gt;</td>
+<td style="text-align:center">(412,9)</td>
+<td style="text-align:right">(412,4)</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:Cornflowerblue&quot;&gt;TABLE SUPLEMENTOS_300&lt;/span&gt;</td>
+<td style="text-align:center">(274,10)</td>
+<td style="text-align:right">(274,8)</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:Lightcyan&quot;&gt;TABLE ANEMIA_300&lt;/span&gt;</td>
+<td style="text-align:center">(496,87)</td>
+<td style="text-align:right">(495,9)</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:Olivedrab&quot;&gt;TABLE CRED_PESO_TALLA&lt;/span&gt;</td>
+<td style="text-align:center">(496,90)</td>
+<td style="text-align:right">(495,30)</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:Palegoldenrod&quot;&gt;TABLE CRED_PESO_TALLA&lt;/span&gt;</td>
+<td style="text-align:center">(496,52)</td>
+<td style="text-align:right">(495,22)</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:Pink&quot;&gt;TABLE ALIMENTACION_300&lt;/span&gt;</td>
+<td style="text-align:center">(496,66)</td>
+<td style="text-align:right">(495,19)</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:Plum&quot;&gt;TABLE RES_SIN_ID_400&lt;/span&gt;</td>
+<td style="text-align:center">(409,23)</td>
+<td style="text-align:right">(91,17)</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;span style=&quot;color:Hotpink&quot;&gt;TABLE FACTOR_ZONA&lt;/span&gt;</td>
+<td style="text-align:center">(461,12)</td>
+<td style="text-align:right">(461,12)</td>
+</tr>
+</tbody>
+</table>
+<h3>Load</h3>
+<p>El proceso seguido para la construcción del data pipepline fue el siguiente.</p>
+<p><img src="PIPELINE.png" alt=""></p>
+<p>Cabe resaltar que al llevar las tablas a postgres, se eliminaron 2 denominadas &quot;prendas&quot; pues no eran relevantes al estudio.</p>
+<p>Se almacenaron entonces 10 tablas o relaciones conectadas bajo el siguiente diagrama:</p>
+<p><img src="DIAGRAMA_bd.jpg" alt=""></p>
+<h3>Transform</h3>
+<p>A fin de poder crear el dashboard con las relaciones que se buscaban, se crearon 6 data marts. (subsets de la data warehouse).</p>
+<p>Se hizo la llamada mediante <em>psycopg2</em> al entorno de Python a la base de datos.</p>
+<p>Para lograr cada uno, se aplicaron los siguientes metodos de preprocesamiento de datos:</p>
+<ul>
+<li>Data Integration:</li>
+</ul>
+<p>Se llevó a cabo la integración de los datos de diferentes bases de datos en Python utilizando la biblioteca psycopg2. Esto implicó combinar y unir los conjuntos de datos relevantes para crear un conjunto de datos consolidado y coherente que sería utilizado para construir el dashboard.</p>
+<ul>
+<li>
+<p>Data cleaning:</p>
+<ul>
+<li>
+<p>Nivel 1:Se realizaron las siguientes tareas de limpieza de datos:</p>
+<ul>
+<li>Nombres de columnas: Se verificaron los nombres de las columnas y se realizaron cambios si era necesario para asegurar la consistencia y la comprensión adecuada de los datos.</li>
+<li>Identificador único: Se verificó la presencia de un identificador único en las tablas y se aseguró de que cada registro tuviera un identificador único para evitar duplicados y errores en el análisis posterior.</li>
+</ul>
+</li>
+<li>
+<p>Nivel 2: Se llevaron a cabo las siguientes tareas de limpieza de datos:</p>
+<ul>
+<li>Selección de atributos requeridos: Se identificaron los atributos necesarios para el análisis y se descartaron los atributos irrelevantes.</li>
+<li>Tipos de atributos: Se verificaron y se aseguró de que los tipos de datos de cada atributo fueran apropiados para su análisis.</li>
+</ul>
+</li>
+<li>
+<p>Nivel 3: Esta etapa fue opcional y se realizó si se detectaron valores faltantes (missing values) o valores atípicos (outliers) en los datos. Se aplicaron técnicas para manejar los valores faltantes, como la imputación de valores o la eliminación de registros incompletos. Además, se identificaron y se trataron los outliers para evitar que afectaran el análisis posterior.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Data Transformation.</p>
+</li>
+</ul>
+<p>En esta etapa, se realizaron transformaciones en los datos para adecuarlos al formato requerido para su visualización en Tableau. Esto incluyó cambios en la estructura de las tablas, agregación de datos, creación de nuevas variables derivadas y cualquier otra transformación necesaria para facilitar el análisis y la creación de gráficos en Tableau. Estas transformaciones se llevaron a cabo tanto en Python como en Tableau, dependiendo de la complejidad de la tarea y las capacidades de cada herramienta.</p>
+<p>A continuacion se detallan los procesos resaltantes en medio de estas tareas de preprocesamiento:</p>
+<p><em>1. Data integration</em></p>
+<ul>
+<li>
+<p>Se realizó un Dimensionality data reduction, enteramente en Python pero reduciendose las llamadas a las bases de datos a las columnas que se sabía someramente serían de interés.</p>
+</li>
+<li>
+<p>Se llamó a todas las tablas.</p>
+</li>
+</ul>
+<p><em>2. Data cleaning</em></p>
+<ul>
+<li>
+<p>Data Cleaning Level 1</p>
+<ul>
+<li>Se tuvieron que hacer cambios en el formato de nombre en la mayoria de columnas.</li>
+<li>El identificador único que sirve como llave para Tableau se formó como un string de CONGLOME_VIVIENDA_ID.</li>
+</ul>
+</li>
+<li>
+<p>Data Cleaning Level 2</p>
+<ul>
+<li>Luego de la primera seleccion de columnas previa a la integracion, aqui nos quedamos con las que servirian directamente.</li>
+<li>Se cambiaron los codigos numericos a valores descriptivos para las columnas categoricas.</li>
+</ul>
+</li>
+<li>
+<p>Data Cleaning Level 3</p>
+<ul>
+<li>Un análisis de missing values fue solo necesario para el caso de la table con Controles de talla y peso, donde se concluyó estos eran MCAR, además se verificó que para cada control el número de entrevistas realizadas coincidían con los registros de talla y peso,</li>
+</ul>
+</li>
+</ul>
+<p><em>3. Data Transformation</em>
+Se agregaron columnas como la de País al data mart 1 a fin de que Tableau la reconozca, se hicieron transformaciones de cálculo de BMI con el peso y talla, se categorizó luego al tipo de peso, además para el caso de necesidades, del encuestado tener más que el 50% de estas cubiertas se le categorizó como SI y menos de estas,No. Estas transformaciones sirvieron para poder realizar el análisis pertienente en tableau.</p>
+<p><em>Nota: Los detalles de cada integracion junto a las otras tecnicas de procesamiento enfocadas a cada data mart se detallan en el archivo Transform.ipynb</em></p>
+<p>Finalmente se tuvieron listos para tableau los siguientes 6 data marts:</p>
+<ul>
+<li>
+<ol>
+<li>data_factor_sexo: integracion de data_001 y data_factor.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>merged_seguro_anemia: integracion de seguro_ps y data_anemia.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>data_necesidades: integracion de necesidades_100 y data_anemia.</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>data_suplementos_anemia: integracion de data_anemia y data_sumplementos.</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>data_modified_scatter: integracion de cred_peso_talla y data_alimentacion.</li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li>data_hem: integracion de res_sin_id con data_001.</li>
+</ol>
+</li>
+</ul>
+<h3>Visualization</h3>
+<p>Los data marts fueron conectados a Tableau, donde se construyeron los graficos en distintas worksheets haciendo union entre las tablas de ser necesarios y cleaning nivel 1 en algunos casos especiales.</p>
+<p><img src="tableau_grafico.png" alt=""></p>
+<p>A resaltar:</p>
+<ul>
+<li>
+<p>Para poder realizar el mapa, se tuvo que ingresar manualmente la latitud y longitud de algunos departamentos que Tableau no era capaz de reconocer.  Para esto se tuvo que cambiar el tipo de dato a dato geográfico y además retornar al preprocesamiento a incluir una columna con Peruú como pais.</p>
+</li>
+<li>
+<p>Al existir diferencias en algunos ids perdidos ya que el tamaño de los datasets difiere, los filtros propios del dashboard tienen limitacion, en especifico con el boxplot.</p>
+</li>
+</ul>
+<p>Se puede encontrar el archivo en la nube en el siguiente link:</p>
+<p>https://public.tableau.com/app/profile/camila.rosa.rodriguez.valverde/viz/Book1_16891079231410/Dashboard1?publish=yes</p>
+<h1>3. Insights</h1>
+<ul>
+<li>
+<p>A pesar de la variabilidad en las respuestas, una minoría absoluta indicó una respuesta negativa respecto a la lactancia materna.</p>
+</li>
+<li>
+<p>Se observó que los niños que no fueron amamantados presentaban un índice de masa corporal (BMI) menor.</p>
+</li>
+<li>
+<p>Los datos rastreables existentes se limitan a infantes de peso bajo y normal.</p>
+</li>
+<li>
+<p>Independientemente del departamento o tipo de zona considerada, el seguro predominante entre la población encuestada es el Sistema Integral de Salud (SIS).</p>
+</li>
+<li>
+<p>Contrariamente a las expectativas, los niveles promedio de hemoglobina resultaron ser mayores en infantes menores de un año.</p>
+</li>
+<li>
+<p>El diagnóstico de anemia no altera la administración de suplementos alimenticios en los infantes.</p>
+</li>
+</ul>
+<h2>4. Conclusiones</h2>
+<ul>
+<li>
+<p>La falta de concordancia entre los identificadores únicos y el número de observaciones para cada relación sobre la misma muestra sugiere que la ausencia de un informe técnico VIANEV para los años 2017-2018 podría deberse a las limitaciones en los datos proporcionados por el equipo de encuestas.</p>
+</li>
+<li>
+<p>Se subraya la necesidad de una clave única coherente al trabajar con múltiples relaciones.</p>
+</li>
+<li>
+<p>Las principales complicaciones surgieron durante la integración de los datos.</p>
+</li>
+<li>
+<p>Es vital que, en presencia de controles periódicos, se mantenga un seguimiento continuo de la familia para obtener resultados significativos.</p>
+</li>
+<li>
+<p>Los indicadores no variaron significativamente según el departamento o la zona.</p>
+</li>
+</ul>
+<h2>4. Conclusiones</h2>
+<ul>
+<li>
+<p>Debido a la gran discordancia de identificadores únicos y números de observaciones para cada relación sobre una misma muestra, se entiende que la falta de un informe técnico VIANEV para el 2017-2018 son debido a las limitantes de la data que proporcionó el equipo de encuestas.</p>
+</li>
+<li>
+<p>Se reconoce la necesidade de una llave única congruente cuando se trabaja con múltiples relaciones.</p>
+</li>
+<li>
+<p>Las complicaciones fueron principalmente debido a las integraciones de data.</p>
+</li>
+<li>
+<p>Es necesario e importante que de haber controles periódicos se haga seguimiento continuo de la familia a fin de tener resultados resaltables.</p>
+</li>
+<li>
+<p>Los indicadores no cambiaron de manera importante según departamento o zona.</p>
+</li>
+</ul>
+<h2>Referencias</h2>
+<p>Centro Nacional de Alimentación y Nutrición (2019). Informe técnico: Vigilancia alimentaria y nutricional de la población peruana menor de cinco años (VIANEV) 2019. https://web.ins.gob.pe/sites/default/files/Archivos/cenan/van/vigilacia_poblacion/Informe%20Tecnico%20%20VIANEV%20ni%C3%B1os%20menores%20de%205%20a%C3%B1os%202019.pdf</p>
+<p>20minutos (2021). ¿Cuáles son los valores normales de hemoglobina en niños? Recuperado de https://www.20minutos.es/salud/familia/cuales-son-los-valores-normales-de-hemoglobina-en-ninos-4824248/</p>
+<p>Braunstein, E. M. (2022). Evaluación de la anemia. En MSD Manuals. Recuperado de https://www.msdmanuals.com/es/professional/hematolog%C3%ADa-y-oncolog%C3%ADa/abordaje-del-paciente-con-anemia/evaluaci%C3%B3n-de-la-anemia</p>
+<p>CDC (2021). Acerca del índice de masa corporal para niños y adolescentes. Recuperado de https://www.cdc.gov/healthyweight/spanish/assessing/bmi/childrens_bmi/acerca_indice_masa_corporal_ninos_adolescentes.html</p>

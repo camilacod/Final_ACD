@@ -21,7 +21,7 @@
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='Book1_16891079231410' path='/workbooks' revision='1.0' />
+  <repository-location id='Book1_16891079231410' path='/workbooks' revision='1.1' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -2336,6 +2336,11 @@
           <groupfilter function='level-members' level='[sexo]' />
         </groupfilter>
       </group>
+      <group caption='Action (Zona)' hidden='true' name='[Action (Zona)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Area_Type]' />
+        </groupfilter>
+      </group>
       <group hidden='true' name='[Exclusions (Anemia1,P209)]' name-style='unqualified' user:auto-column='exclude'>
         <groupfilter function='crossjoin'>
           <groupfilter function='level-members' level='[none:Anemia:nk]' />
@@ -3578,9 +3583,9 @@
     <mapsource name='Tableau' />
   </mapsources>
   <actions>
-    <action caption='Filter 1 (generated)' name='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]'>
+    <action caption='Filter 1 (generated)' name='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]'>
       <activation auto-clear='true' type='on-select' />
-      <source dashboard='Dashboard 1' type='sheet' worksheet='Sheet 1' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Sheet 3' />
       <command command='tsc:tsl-filter'>
         <param name='special-fields' value='all' />
         <param name='target' value='Dashboard 1' />
@@ -3599,7 +3604,17 @@
             <column-instance column='[departamento_x]' derivation='Count' name='[cnt:departamento_x:qk]' pivot='key' type='quantitative' />
             <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Area_Type]' derivation='None' name='[none:Area_Type:nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -3655,10 +3670,21 @@
             <column caption='Cumple Necesidad' datatype='string' name='[CumpleNecesidad]' role='dimension' type='nominal' />
             <column caption='Estado nutricional' datatype='string' name='[Estado_nutricional]' role='dimension' type='nominal' />
             <column-instance column='[index_ (data_necesidades.csv)]' derivation='CountD' name='[ctd:index_ (data_necesidades.csv):qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Index  (Data Necesidades.Csv)' datatype='string' name='[index_ (data_necesidades.csv)]' role='dimension' type='nominal' />
             <column-instance column='[CumpleNecesidad]' derivation='None' name='[none:CumpleNecesidad:nk]' pivot='key' type='nominal' />
             <column-instance column='[Estado_nutricional]' derivation='None' name='[none:Estado_nutricional:nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -3763,11 +3789,19 @@
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
             <column caption='Anemia1' datatype='string' name='[Anemia]' role='dimension' type='nominal' />
             <column-instance column='[index_ (merged_seguro_anemia.csv)]' derivation='Count' name='[cnt:index_ (merged_seguro_anemia.csv):qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Index  (Merged Seguro Anemia.Csv)' datatype='string' name='[index_ (merged_seguro_anemia.csv)]' role='dimension' type='nominal' />
             <column-instance column='[Anemia]' derivation='None' name='[none:Anemia:nk]' pivot='key' type='nominal' />
             <column-instance column='[p209]' derivation='None' name='[none:p209:nk]' pivot='key' type='nominal' />
             <column caption='P209' datatype='string' name='[p209]' role='dimension' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
+          </filter>
           <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Exclusions (Anemia1,P209)]'>
             <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
               <groupfilter function='crossjoin'>
@@ -3817,6 +3851,7 @@
             <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Exclusions (Anemia1,P209)]</column>
             <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[none:p209:nk]</column>
             <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[none:Anemia:nk]</column>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -3869,17 +3904,21 @@
             <mapsource name='Tableau' />
           </mapsources>
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
-            <column caption='Zona' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
             <column-instance column='[index_]' derivation='Count' name='[cnt:index_:qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Index' datatype='string' name='[index_]' role='dimension' type='nominal' />
             <column-instance column='[sexo]' derivation='None' name='[none:sexo:nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column caption='Sexo' datatype='string' name='[sexo]' role='dimension' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]'>
-            <groupfilter function='level-members' level='[Area_Type]' user:ui-action-filter='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
           </filter>
           <slices>
-            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]</column>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -3961,7 +4000,6 @@
             <mapsource name='Tableau' />
           </mapsources>
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
-            <column caption='Zona' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
             <column-instance column='[index_]' derivation='Count' name='[cnt:index_:qk]' pivot='key' type='quantitative' />
             <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Index' datatype='string' name='[index_]' role='dimension' type='nominal' />
@@ -3969,12 +4007,6 @@
             <column-instance column='[pais]' derivation='None' name='[none:pais:nk]' pivot='key' type='nominal' />
             <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]'>
-            <groupfilter function='level-members' level='[Area_Type]' user:ui-action-filter='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]' user:ui-enumeration='all' user:ui-marker='enumerate' />
-          </filter>
-          <slices>
-            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]</column>
-          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -4103,20 +4135,24 @@
           </datasources>
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
             <column caption='Amamantado (modified data scatter.csv)' datatype='string' name='[Amamantado (modified_data_scatter.csv)]' role='dimension' type='nominal' />
-            <column caption='Zona' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
             <column datatype='real' name='[BMI]' role='measure' type='quantitative' />
             <column datatype='integer' name='[Control]' role='measure' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Amamantado (modified_data_scatter.csv)]' derivation='None' name='[none:Amamantado (modified_data_scatter.csv):nk]' pivot='key' type='nominal' />
             <column-instance column='[BMI]' derivation='None' name='[none:BMI:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Control]' derivation='None' name='[none:Control:qk]' pivot='key' type='quantitative' />
             <column-instance column='[sexo (modified_data_scatter.csv)]' derivation='None' name='[none:sexo (modified_data_scatter.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column caption='Sexo (Modified Data Scatter.Csv)' datatype='string' name='[sexo (modified_data_scatter.csv)]' role='dimension' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]'>
-            <groupfilter function='level-members' level='[Area_Type]' user:ui-action-filter='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
           </filter>
           <slices>
-            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]</column>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -4176,16 +4212,20 @@
             <datasource caption='data_factor_sexo' name='federated.1wf3gnq1miaxzk15qzrm40laz0bn' />
           </datasources>
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
-            <column caption='Zona' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
             <column datatype='real' name='[Hemoglobina]' role='measure' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Etapa' datatype='string' name='[etapa]' role='dimension' type='nominal' />
             <column-instance column='[Hemoglobina]' derivation='None' name='[none:Hemoglobina:qk]' pivot='key' type='quantitative' />
             <column-instance column='[etapa]' derivation='None' name='[none:etapa:nk]' pivot='key' type='nominal' />
             <column-instance column='[sexo (data_hem.csv)]' derivation='None' name='[none:sexo (data_hem.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column caption='Sexo (Data Hem.Csv)' datatype='string' name='[sexo (data_hem.csv)]' role='dimension' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]'>
-            <groupfilter function='level-members' level='[Area_Type]' user:ui-action-filter='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Exclusions (Etapa,Hemoglobina,Sexo (Data Hem.Csv))]'>
             <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
@@ -4212,7 +4252,7 @@
           </filter>
           <slices>
             <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Exclusions (Etapa,Hemoglobina,Sexo (Data Hem.Csv))]</column>
-            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]</column>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -4256,8 +4296,19 @@
           </datasources>
           <datasource-dependencies datasource='federated.0578rb91lnzj9b1choacu03mmvhe'>
             <column-instance column='[edad]' derivation='Avg' name='[avg:edad:qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' type='nominal' />
             <column caption='Edad' datatype='integer' name='[edad]' role='measure' type='quantitative' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.0578rb91lnzj9b1choacu03mmvhe].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0578rb91lnzj9b1choacu03mmvhe].[Action (Departamento X,Pais)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -4297,15 +4348,19 @@
             <datasource caption='data_factor_sexo' name='federated.1wf3gnq1miaxzk15qzrm40laz0bn' />
           </datasources>
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
-            <column caption='Zona' datatype='string' name='[Area_Type]' role='dimension' type='nominal' />
             <column-instance column='[index_]' derivation='CountD' name='[ctd:index_:qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column caption='Index' datatype='string' name='[index_]' role='dimension' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]'>
-            <groupfilter function='level-members' level='[Area_Type]' user:ui-action-filter='[Action1_6B56B7196DC44BCAA40902DDFDCE2B38]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
           </filter>
           <slices>
-            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Area Type)]</column>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -4361,10 +4416,21 @@
           <datasource-dependencies datasource='federated.1wf3gnq1miaxzk15qzrm40laz0bn'>
             <column caption='Anemia en los últimos 12 meses' datatype='string' name='[anemia]' role='dimension' type='nominal' />
             <column-instance column='[anemia]' derivation='Count' name='[cnt:anemia:qk]' pivot='key' type='quantitative' />
+            <column caption='Departamento X' datatype='string' name='[departamento_x]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[anemia]' derivation='None' name='[none:anemia:nk]' pivot='key' type='nominal' />
             <column-instance column='[suplementos]' derivation='None' name='[none:suplementos:nk]' pivot='key' type='nominal' />
+            <column caption='Pais' datatype='string' name='[pais]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column caption='Suplementos' datatype='string' name='[suplementos]' role='dimension' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_1DD6483295B74FE5A9BBC35190EA0B15]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[departamento_x]' />
+              <groupfilter function='level-members' level='[pais]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1wf3gnq1miaxzk15qzrm40laz0bn].[Action (Departamento X,Pais)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -4538,8 +4604,8 @@
           </layout-options>
           <size maxheight='2350' minheight='2350' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='48' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='47' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='52' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='51' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone h='5250' id='36' type-v2='title' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4781,7 +4847,7 @@
           </highlight>
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='36' />
       <simple-id uuid='{09E68A25-3D61-4AA6-8F31-604626A1C12B}' />
     </window>
     <window class='worksheet' name='Sheet 2'>
