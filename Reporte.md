@@ -334,6 +334,37 @@ RESULTADOFINALDELAENCUESTA INT| |1: Completa<br>2: Incompleta<br> 3: Rechazo <br
 ### Transform
 Explica aquí cada uno de los pasos de la transformación que realizaste, incluyendo las tareas de preprocesamiento y la eliminación de outliers. También puedes mencionar aquí si has creado un datamart y por qué.
 
+Preprocesamiento:
+
+*1. Data integration*
+
+- Dimensionality data reduction
+
+En Python
+
+
+*2. Data cleaning*
+- Data Cleaning Level 1
+
+    - Nombres de columnas
+    - Identificador unico
+
+- Data Cleaning Level 2
+    - Que atributos se necesitan si o si.
+    - Tipos de atributos
+- Data Cleaning Level 3
+    - MV y Outliers
+
+*3. Data Transformation*
+
+
+
+En python y el mismo Tableau.
+
+### Visualization 
+
+
+
 ## 3. Insights
 Explica aquí qué insights interesantes has encontrado a través del análisis computacional de los datos.
 

@@ -467,17 +467,25 @@
 
 ---
 - Dashboard
-    1. Heatmap geoespacial: departamento, provincia, distrito de los encuestados.
+    1. Mapa geoespacial: departamento, provincia, distrito de los encuestados.
     Filtro. Dinamico.
     2. Tabla de conglomerados: Rural, Urbano, total, numero de evaluados.
-
+---data_factor_sexo---
     3. Barplot apilado. Eje x: Si NB, no NB (NECESIDADES_100). Dimension urbano, rural.
+    FALTA.
+
     4. Grouped Barplot  horizontal. Consume_suplementos (Si/No). Eje X: Anemia en los ultimos meses.
+    FALTA PREPROCESAMIENTO Y TABLEAU
+
     5. Scatterplot. 8 controles. Control vs BMI. Sexo. Le dio pecho al ninhio
+    EN PROCESO LIMPIEZA
     6. Box plot. Edad en 3 grupos. 36 meses. Hemoglobina. 
+    FALTA TODO
     7. Alimentacion?
     8. Altitud.
+    TUVE LA IDEA.
     9. Educacion. 
+    HAY UNA IDEA. QUE VARIABLES SE NECESITAN.
 
 NINOS POR CASA
 ----
