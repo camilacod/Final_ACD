@@ -1,0 +1,462 @@
+conglome,vivienda,id,index_,altitud,sexo,departamento_x,provincia_x,distrito_x,res_peso,res_talla,res_hb,res_final,pais,Area_Type
+5345,4,3,5345_4_3,2581,Femenino,Apurimac,Abancay,Tamburco,1,1,1,1,Peru,Urbano
+5351,1,6,5351_1_6,2378,Femenino,Apurimac,Abancay,Abancay,1,1,1,1,Peru,Urbano
+5384,6,7,5384_6_7,3075,Masculino,Apurimac,Chincheros,Huaccana,1,1,1,1,Peru,Rural
+6028,7,3,6028_7_3,21,Femenino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+6064,1,4,6064_1_4,21,Masculino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+6287,3,3,6287_3_3,3200,Masculino,Cusco,Calca,Lares,1,1,1,1,Peru,Rural
+6643,6,5,6643_6_5,250,Masculino,Huanuco,Puerto inca,Tournavista,1,1,1,1,Peru,Rural
+6713,2,7,6713_2_7,406,Femenino,Ica,Ica,Ica,1,1,1,1,Peru,Urbano
+6809,5,6,6809_5_6,425,Masculino,Ica,Ica,Salas,1,1,1,1,Peru,Urbano
+6981,9,6,6981_9_6,3646,Femenino,Junin,Huancayo,Sicaya,1,1,1,1,Peru,Urbano
+7069,1,4,7069_1_4,780,Masculino,Junin,Satipo,Coviriali,1,1,1,1,Peru,Rural
+7122,1,3,7122_1_3,34,Masculino,La libertad,Trujillo,Trujillo,1,1,1,1,Peru,Urbano
+7333,8,7,7333_8_7,40,Masculino,Lambayeque,Chiclayo,Jose leonardo ortiz,1,1,1,1,Peru,Urbano
+7579,1,4,7579_1_4,130,Femenino,Lima,Lima,Independencia,1,1,1,1,Peru,Urbano
+7606,7,7,7606_7_7,220,Femenino,Lima,Lima,San juan de lurigancho,1,1,1,1,Peru,Urbano
+8408,6,6,8408_6_6,186,Masculino,Madre de dios,Tambopata,Tambopata,1,1,1,1,Peru,Urbano
+8863,3,7,8863_3_7,17,Femenino,Piura,Piura,La union,1,1,1,1,Peru,Urbano
+9173,6,5,9173_6_5,809,Femenino,San Martin,Lamas,Lamas,1,1,1,1,Peru,Urbano
+9179,9,8,9179_9_8,1450,Masculino,San Martin,Rioja,Pardo miguel,1,1,1,1,Peru,Rural
+9277,2,4,9277_2_4,223,Femenino,San Martin,Picota,Picota,1,1,1,1,Peru,Urbano
+9601,9,5,9601_9_5,54,Masculino,Tumbes,Zarumilla,Matapalo,1,1,1,1,Peru,Rural
+9719,3,5,9719_3_5,450,Masculino,Ucayali,Atalaya,Raymondi,1,1,1,1,Peru,Urbano
+9720,5,6,9720_5_6,450,Femenino,Ucayali,Atalaya,Raymondi,1,1,1,1,Peru,Urbano
+9756,3,8,9756_3_8,270,Masculino,Ucayali,Coronel portillo,Iparia,1,1,1,1,Peru,Rural
+9820,4,6,9820_4_6,21,Masculino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+10150,1,6,10150_1_6,525,Femenino,Junin,Chanchamayo,Pichanaqui,1,1,1,1,Peru,Rural
+10150,2,6,10150_2_6,525,Masculino,Junin,Chanchamayo,Pichanaqui,1,1,1,1,Peru,Rural
+5013,37,9,5013_37_9,2335,Femenino,Amazonas,Chachapoyas,Chachapoyas,1,1,1,1,Peru,Urbano
+5023,40,7,5023_40_7,230,Masculino,Amazonas,Condorcanqui,Nieva,1,1,1,1,Peru,Urbano
+5023,80,6,5023_80_6,230,Masculino,Amazonas,Condorcanqui,Nieva,1,1,1,1,Peru,Urbano
+5029,27,3,5029_27_3,421,Masculino,Amazonas,Bagua,Bagua,1,1,1,1,Peru,Urbano
+5061,68,4,5061_68_4,1650,Masculino,Amazonas,Luya,Camporredondo,1,1,1,1,Peru,Urbano
+5061,80,3,5061_80_3,1650,Femenino,Amazonas,Luya,Camporredondo,1,1,1,1,Peru,Urbano
+5074,78,7,5074_78_7,480,Femenino,Amazonas,Condorcanqui,Rio santiago,1,1,1,1,Peru,Rural
+5074,81,8,5074_81_8,480,Masculino,Amazonas,Condorcanqui,Rio santiago,1,1,1,1,Peru,Rural
+5107,29,8,5107_29_8,1400,Masculino,Amazonas,Utcubamba,Cajaruro,1,1,1,1,Peru,Rural
+5107,35,5,5107_35_5,1400,Femenino,Amazonas,Utcubamba,Cajaruro,1,1,1,1,Peru,Rural
+5130,18,5,5130_18_5,2000,Masculino,Amazonas,Luya,Camporredondo,1,1,1,1,Peru,Rural
+5132,68,7,5132_68_7,1954,Masculino,Amazonas,Luya,Ocalli,1,1,1,1,Peru,Rural
+5138,77,9,5138_77_9,2000,Masculino,Amazonas,Luya,Ocumal,1,1,1,1,Peru,Rural
+5154,12,6,5154_12_6,2891,Masculino,Amazonas,Chachapoyas,La jalca,1,1,1,1,Peru,Rural
+5184,21,4,5184_21_4,4,Masculino,Ancash,Santa,Chimbote,1,1,1,1,Peru,Urbano
+5225,13,6,5225_13_6,809,Masculino,Ancash,Casma,Yautan,1,1,1,1,Peru,Urbano
+5230,11,4,5230_11_4,4,Masculino,Ancash,Santa,Chimbote,1,1,1,1,Peru,Rural
+5260,56,6,5260_56_6,3052,Femenino,Ancash,Huaraz,Huaraz,1,1,1,1,Peru,Urbano
+5283,12,5,5283_12_5,2725,Femenino,Ancash,Sihuas,San juan,1,1,1,1,Peru,Rural
+5283,90,5,5283_90_5,2725,Masculino,Ancash,Sihuas,San juan,1,1,1,1,Peru,Rural
+5298,79,4,5298_79_4,1152,Masculino,Ancash,Yungay,Quillo,1,1,1,1,Peru,Rural
+5345,85,4,5345_85_4,2581,Femenino,Apurimac,Abancay,Tamburco,1,1,1,1,Peru,Urbano
+5427,29,5,5427_29_5,3362,Femenino,Apurimac,Andahuaylas,Pampachiri,1,1,1,1,Peru,Rural
+5473,68,5,5473_68_5,2335,Femenino,Arequipa,Arequipa,Cerro colorado,1,1,1,1,Peru,Urbano
+5500,80,4,5500_80_4,2335,Masculino,Arequipa,Arequipa,Arequipa,1,1,1,1,Peru,Urbano
+5555,84,3,5555_84_3,2335,Femenino,Arequipa,Arequipa,Paucarpata,1,1,1,1,Peru,Urbano
+5567,61,5,5567_61_5,2300,Masculino,Arequipa,Arequipa,Socabaya,1,1,1,1,Peru,Urbano
+5622,43,4,5622_43_4,1950,Masculino,Arequipa,Arequipa,Uchumayo,1,1,1,1,Peru,Urbano
+5685,85,3,5685_85_3,2780,Masculino,Ayacucho,Huamanga,Jesus nazareno,1,1,1,1,Peru,Urbano
+5761,92,4,5761_92_4,2524,Masculino,Ayacucho,Paucar del sara sara,Pausa,1,1,1,1,Peru,Urbano
+5764,47,7,5764_47_7,350,Masculino,Ayacucho,Huanta,Sivia,1,1,1,1,Peru,Rural
+5764,48,9,5764_48_9,350,Masculino,Ayacucho,Huanta,Sivia,1,1,1,1,Peru,Rural
+5792,50,8,5792_50_8,2780,Masculino,Ayacucho,Huamanga,Jesus nazareno,1,1,1,1,Peru,Rural
+5849,29,6,5849_29_6,2667,Masculino,Cajamarca,Cajamarca,Los baã‘os del inca,1,1,1,1,Peru,Urbano
+5898,81,3,5898_81_3,2526,Masculino,Cajamarca,Hualgayoc,Bambamarca,1,1,1,1,Peru,Urbano
+5925,83,9,5925_83_9,421,Femenino,Cajamarca,Jaen,Bellavista,1,1,1,1,Peru,Rural
+5952,27,4,5952_27_4,1600,Femenino,Cajamarca,Chota,Chimban,1,1,1,1,Peru,Rural
+5952,28,4,5952_28_4,1600,Femenino,Cajamarca,Chota,Chimban,1,1,1,1,Peru,Rural
+5952,63,5,5952_63_5,1600,Femenino,Cajamarca,Chota,Chimban,1,1,1,1,Peru,Rural
+5984,14,4,5984_14_4,1200,Femenino,Cajamarca,San miguel,La florida,1,1,1,1,Peru,Rural
+6038,67,5,6038_67_5,98,Masculino,Callao,Callao,Mi peru,1,1,1,1,Peru,Urbano
+6044,54,5,6044_54_5,21,Femenino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+6059,36,6,6059_36_6,21,Femenino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+6061,77,3,6061_77_3,21,Masculino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+6063,20,4,6063_20_4,21,Masculino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+6078,65,5,6078_65_5,23,Femenino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+6119,42,3,6119_42_3,38,Masculino,Callao,Callao,Callao,1,1,1,1,Peru,Urbano
+6125,96,3,6125_96_3,7,Femenino,Callao,Callao,Callao,1,1,1,1,Peru,Urbano
+6251,58,6,6251_58_6,3660,Masculino,Cusco,Chumbivilcas,Santo tomas,1,1,1,1,Peru,Urbano
+6266,86,4,6266_86_4,3570,Masculino,Cusco,Canchis,Pitumarca,1,1,1,1,Peru,Urbano
+6287,77,5,6287_77_5,3200,Masculino,Cusco,Calca,Andaraes,1,1,1,1,Peru,Rural
+6298,42,5,6298_42_5,3435,Femenino,Cusco,Anta,Ancahuasi,1,1,1,1,Peru,Rural
+6322,22,7,6322_22_7,3210,Masculino,Cusco,Quispicanchi,Quiquijana,1,1,1,1,Peru,Rural
+6343,32,8,6343_32_8,3980,Masculino,Cusco,Espinar,Pallpata,1,1,1,1,Peru,Rural
+6343,47,4,6343_47_4,3980,Femenino,Cusco,Espinar,Pallpata,1,1,1,1,Peru,Rural
+6343,56,4,6343_56_4,3980,Masculino,Cusco,Espinar,Pallpata,1,1,1,1,Peru,Rural
+6364,71,7,6364_71_7,3660,Masculino,Huancavelica,Huancavelica,Huancavelica,1,1,1,1,Peru,Urbano
+6417,28,5,6417_28_5,2350,Femenino,Huancavelica,Tayacaja,Tintay puncu,1,1,1,1,Peru,Rural
+6421,45,4,6421_45_4,3580,Femenino,Huancavelica,Churcampa,San pedro de coris,1,1,1,1,Peru,Rural
+6433,36,5,6433_36_5,3640,Masculino,Huancavelica,Acobamba,Rosario,1,1,1,1,Peru,Rural
+6448,27,8,6448_27_8,3825,Femenino,Huancavelica,Huancavelica,Nuevo occoro,1,1,1,1,Peru,Rural
+6483,81,6,6483_81_6,3523,Femenino,Huancavelica,Angaraes,Congalla,1,1,1,1,Peru,Rural
+6507,44,3,6507_44_3,1894,Masculino,Huanuco,Huanuco,Huanuco,1,1,1,1,Peru,Urbano
+6546,23,5,6546_23_5,649,Masculino,Huanuco,Leoncio prado,Rupa - rupa,1,1,1,1,Peru,Urbano
+6546,36,6,6546_36_6,649,Masculino,Huanuco,Leoncio prado,Rupa - rupa,1,1,1,1,Peru,Urbano
+6569,47,6,6569_47_6,2750,Femenino,Huanuco,Maranon,Cholon,1,1,1,1,Peru,Rural
+6584,57,6,6584_57_6,1250,Masculino,Huanuco,Leoncio prado,Hermilio valdizan,1,1,1,1,Peru,Rural
+6602,42,4,6602_42_4,3950,Masculino,Huanuco,Dos de mayo,Pachas,1,1,1,1,Peru,Rural
+6602,42,5,6602_42_5,3950,Femenino,Huanuco,Dos de mayo,Pachas,1,1,1,1,Peru,Rural
+6602,44,5,6602_44_5,3935,Femenino,Huanuco,Dos de mayo,Pachas,1,1,1,1,Peru,Rural
+6621,94,5,6621_94_5,2110,Masculino,Huanuco,Huanuco,Chinchao,1,1,1,1,Peru,Rural
+6643,24,5,6643_24_5,250,Masculino,Huanuco,Puerto inca,Tournavista,1,1,1,1,Peru,Rural
+6651,55,4,6651_55_4,3000,Femenino,Huanuco,Pachitea,Chaglla,1,1,1,1,Peru,Rural
+6652,94,5,6652_94_5,1846,Femenino,Huanuco,Pachitea,Panao,1,1,1,1,Peru,Rural
+6712,53,6,6712_53_6,406,Masculino,Ica,Ica,Ica,1,1,1,1,Peru,Urbano
+6740,27,6,6740_27_6,41,Masculino,Ica,Chincha,Pueblo nuevo,1,1,1,1,Peru,Urbano
+6788,61,6,6788_61_6,406,Femenino,Ica,Pisco,Pisco,1,1,1,1,Peru,Urbano
+6792,91,4,6792_91_4,406,Femenino,Ica,Pisco,Pisco,1,1,1,1,Peru,Urbano
+6798,63,5,6798_63_5,70,Femenino,Ica,Pisco,Tupac amaru inca,1,1,1,1,Peru,Urbano
+6807,45,5,6807_45_5,430,Masculino,Ica,Pisco,Humay,1,1,1,1,Peru,Urbano
+6809,81,6,6809_81_6,425,Femenino,Ica,Ica,Salas,1,1,1,1,Peru,Urbano
+6843,53,8,6843_53_8,4,Masculino,Ica,Nazca,Marcona,1,1,1,1,Peru,Urbano
+6850,35,5,6850_35_5,155,Masculino,Ica,Chincha,El carmen,1,1,1,1,Peru,Rural
+6905,97,4,6905_97_4,3249,Masculino,Junin,Huancayo,Huancayo,1,1,1,1,Peru,Urbano
+6960,98,7,6960_98_7,1000,Masculino,Junin,Chanchamayo,Perene,1,1,1,1,Peru,Urbano
+6981,51,4,6981_51_4,3646,Femenino,Junin,Huancayo,Sicaya,1,1,1,1,Peru,Urbano
+7033,42,6,7033_42_6,3340,Masculino,Junin,Jauja,Apata,1,1,1,1,Peru,Rural
+7033,46,6,7033_46_6,3340,Femenino,Junin,Jauja,Apata,1,1,1,1,Peru,Rural
+7101,7,99,7101_7_99,34,Femenino,La libertad,Trujillo,Trujillo,1,1,1,1,Peru,Urbano
+7145,61,2,7145_61_2,90,Masculino,La libertad,Trujillo,El porvenir,1,1,1,1,Peru,Urbano
+7145,97,5,7145_97_5,90,Femenino,La libertad,Trujillo,El porvenir,1,1,1,1,Peru,Urbano
+7158,13,4,7158_13_4,85,Masculino,La libertad,Trujillo,Florencia de mora,1,1,1,1,Peru,Urbano
+7180,96,5,7180_96_5,8,Femenino,La libertad,Pacasmayo,Pacasmayo,1,1,1,1,Peru,Urbano
+7203,80,4,7203_80_4,23,Femenino,La libertad,Trujillo,Huanchaco,1,1,1,1,Peru,Urbano
+7207,42,4,7207_42_4,89,Femenino,La libertad,Trujillo,Laredo,1,1,1,1,Peru,Urbano
+7208,73,7,7208_73_7,4,Masculino,La libertad,Trujillo,Moche,1,1,1,1,Peru,Urbano
+7239,20,6,7239_20_6,153,Masculino,La libertad,Pacasmayo,San pedro de lloc,1,1,1,1,Peru,Rural
+7239,20,9,7239_20_9,153,Femenino,La libertad,Pacasmayo,San pedro de lloc,1,1,1,1,Peru,Rural
+7241,84,6,7241_84_6,89,Femenino,La libertad,Trujillo,Laredo,1,1,1,1,Peru,Rural
+7246,25,3,7246_25_3,2180,Femenino,La libertad,Otuzco,Huaranchal,1,1,1,1,Peru,Rural
+7246,26,5,7246_26_5,2180,Masculino,La libertad,Otuzco,Huaranchal,1,1,1,1,Peru,Rural
+7246,60,4,7246_60_4,2180,Femenino,La libertad,Otuzco,Huaranchal,1,1,1,1,Peru,Rural
+7248,86,9,7248_86_9,3018,Masculino,La libertad,Otuzco,Usquil,1,1,1,1,Peru,Rural
+7248,87,7,7248_87_7,3018,Femenino,La libertad,Otuzco,Usquil,1,1,1,1,Peru,Rural
+7248,88,5,7248_88_5,3018,Masculino,La libertad,Otuzco,Usquil,1,1,1,1,Peru,Rural
+7279,75,4,7279_75_4,3099,Masculino,La libertad,Santiago de chuco,Santiago de chuco,1,1,1,1,Peru,Rural
+7279,76,4,7279_76_4,3099,Femenino,La libertad,Santiago de chuco,Santiago de chuco,1,1,1,1,Peru,Rural
+7302,23,5,7302_23_5,29,Masculino,Lambayeque,Chiclayo,Chiclayo,1,1,1,1,Peru,Urbano
+7333,8,99,7333_8_99,40,Masculino,Lambayeque,Chiclayo,Jose leonardo ortiz,1,1,1,1,Peru,Urbano
+7397,55,6,7397_55_6,5,Femenino,Lambayeque,Chiclayo,Eten puerto,1,1,1,1,Peru,Urbano
+7439,30,6,7439_30_6,40,Masculino,Lambayeque,Chiclayo,Picsi,1,1,1,1,Peru,Urbano
+7446,10,8,7446_10_8,16,Masculino,Lambayeque,Lambayeque,Morrope,1,1,1,1,Peru,Rural
+7460,60,4,7460_60_4,175,Femenino,Lambayeque,Lambayeque,Olmos,1,1,1,1,Peru,Rural
+7511,56,3,7511_56_3,123,Femenino,Lima,Lima,San martin de porres,1,1,1,1,Peru,Urbano
+7529,60,6,7529_60_6,123,Masculino,Lima,Lima,San martin de porres,1,1,1,1,Peru,Urbano
+7529,80,5,7529_80_5,123,Masculino,Lima,Lima,San martin de porres,1,1,1,1,Peru,Urbano
+7531,55,8,7531_55_8,123,Masculino,Lima,Lima,San martin de porres,1,1,1,1,Peru,Urbano
+7541,23,3,7541_23_3,75,Masculino,Lima,Lima,Los olivos,1,1,1,1,Peru,Urbano
+7546,36,5,7546_36_5,70,Femenino,Lima,Lima,Los olivos,1,1,1,1,Peru,Urbano
+7554,90,8,7554_90_8,75,Femenino,Lima,Lima,Los olivos,1,1,1,1,Peru,Urbano
+7567,59,6,7567_59_6,140,Masculino,Lima,Lima,Comas,1,1,1,1,Peru,Urbano
+7567,87,6,7567_87_6,140,Femenino,Lima,Lima,Comas,1,1,1,1,Peru,Urbano
+7574,69,6,7574_69_6,140,Femenino,Lima,Lima,Comas,1,1,1,1,Peru,Urbano
+7582,45,4,7582_45_4,130,Masculino,Lima,Lima,Independencia,1,1,1,1,Peru,Urbano
+7601,84,4,7601_84_4,161,Femenino,Lima,Lima,Rimac,1,1,1,1,Peru,Urbano
+7615,43,5,7615_43_5,205,Masculino,Lima,Lima,San juan de lurigancho,1,1,1,1,Peru,Urbano
+7615,87,4,7615_87_4,205,Masculino,Lima,Lima,San juan de lurigancho,1,1,1,1,Peru,Urbano
+7623,85,7,7623_85_7,220,Femenino,Lima,Lima,San juan de lurigancho,1,1,1,1,Peru,Urbano
+7630,81,8,7630_81_8,220,Masculino,Lima,Lima,San juan de lurigancho,1,1,1,1,Peru,Urbano
+7650,65,7,7650_65_7,861,Masculino,Lima,Lima,Lurigancho,1,1,1,1,Peru,Urbano
+7703,55,7,7703_55_7,154,Femenino,Lima,Lima,Lima,1,1,1,1,Peru,Urbano
+7798,68,5,7798_68_5,133,Femenino,Lima,Lima,La victoria,1,1,1,1,Peru,Urbano
+7812,61,8,7812_61_8,133,Masculino,Lima,Lima,La victoria,1,1,1,1,Peru,Urbano
+7818,44,5,7818_44_5,197,Femenino,Lima,Lima,San luis,1,1,1,1,Peru,Urbano
+7888,80,4,7888_80_4,58,Masculino,Lima,Lima,Baranco,1,1,1,1,Peru,Urbano
+7921,50,5,7921_50_5,141,Femenino,Lima,Lima,San juan de miraflores,1,1,1,1,Peru,Urbano
+7943,23,6,7943_23_6,158,Femenino,Lima,Lima,Villa maria del triunfo,1,1,1,1,Peru,Urbano
+7943,58,6,7943_58_6,158,Masculino,Lima,Lima,Villa maria del triunfo,1,1,1,1,Peru,Urbano
+7960,80,4,7960_80_4,158,Masculino,Lima,Lima,Villa maria del triunfo,1,1,1,1,Peru,Urbano
+7977,31,6,7977_31_6,9,Masculino,Lima,Lima,Lurin,1,1,1,1,Peru,Urbano
+7992,38,8,7992_38_8,49,Femenino,Lima,Barranca,Barranca,1,1,1,1,Peru,Urbano
+8013,39,7,8013_39_7,30,Masculino,Lima,Huaura,Huacho,1,1,1,1,Peru,Urbano
+8013,74,5,8013_74_5,30,Femenino,Lima,Huaura,Huacho,1,1,1,1,Peru,Urbano
+8110,83,5,8110_83_5,30,Femenino,Lima,Canete,Mala,1,1,1,1,Peru,Urbano
+8120,26,7,8120_26_7,81,Masculino,Lima,Barranca,Pativilca,1,1,1,1,Peru,Rural
+8131,93,5,8131_93_5,188,Masculino,Lima,Huaral,Huaral,1,1,1,1,Peru,Rural
+8131,94,3,8131_94_3,188,Masculino,Lima,Huaral,Huaral,1,1,1,1,Peru,Rural
+8188,47,4,8188_47_4,105,Masculino,Loreto,Maynas,Punchana,1,1,1,1,Peru,Urbano
+8188,96,4,8188_96_4,105,Masculino,Loreto,Maynas,Punchana,1,1,1,1,Peru,Urbano
+8281,19,6,8281_19_6,160,Femenino,Loreto,Alto amazonas,Yurimaguas,1,1,1,1,Peru,Urbano
+8281,19,9,8281_19_9,160,Femenino,Loreto,Alto amazonas,Yurimaguas,1,1,1,1,Peru,Urbano
+8282,73,4,8282_73_4,160,Femenino,Loreto,Alto amazonas,Yurimaguas,1,1,1,1,Peru,Urbano
+8305,49,7,8305_49_7,134,Femenino,Loreto,Ucayali,Contamana,1,1,1,1,Peru,Urbano
+8305,49,8,8305_49_8,134,Femenino,Loreto,Ucayali,Contamana,1,1,1,1,Peru,Urbano
+8307,39,6,8307_39_6,164,Masculino,Loreto,Ucayali,Padre marquez,1,1,1,1,Peru,Urbano
+8307,90,5,8307_90_5,164,Masculino,Loreto,Ucayali,Padre marquez,1,1,1,1,Peru,Urbano
+8315,17,3,8315_17_3,112,Femenino,Loreto,Loreto,Urarinas,1,1,1,1,Peru,Rural
+8315,44,7,8315_44_7,112,Femenino,Loreto,Loreto,Urarinas,1,1,1,1,Peru,Rural
+8315,46,5,8315_46_5,112,Femenino,Loreto,Loreto,Urarinas,1,1,1,1,Peru,Rural
+8315,52,8,8315_52_8,112,Femenino,Loreto,Loreto,Urarinas,1,1,1,1,Peru,Rural
+8317,3,99,8317_3_99,111,Femenino,Loreto,Loreto,Nauta,1,1,1,1,Peru,Rural
+8317,68,7,8317_68_7,111,Femenino,Loreto,Loreto,Nauta,1,1,1,1,Peru,Rural
+8318,8,99,8318_8_99,250,Masculino,Loreto,Maynas,Torres causana,1,1,1,1,Peru,Rural
+8327,64,7,8327_64_7,106,Femenino,Loreto,Maynas,Iquitos,1,1,1,1,Peru,Rural
+8327,68,5,8327_68_5,106,Masculino,Loreto,Maynas,Iquitos,1,1,1,1,Peru,Rural
+8330,15,3,8330_15_3,138,Femenino,Loreto,Maynas,San juan bautista,1,1,1,1,Peru,Rural
+8330,15,6,8330_15_6,138,Femenino,Loreto,Maynas,San juan bautista,1,1,1,1,Peru,Rural
+8332,8,99,8332_8_99,128,Masculino,Loreto,Maynas,Alto nanay,1,1,1,1,Peru,Rural
+8335,42,7,8335_42_7,105,Femenino,Loreto,Maynas,Indiana,1,1,1,1,Peru,Rural
+8335,42,8,8335_42_8,105,Femenino,Loreto,Maynas,Indiana,1,1,1,1,Peru,Rural
+8342,37,7,8342_37_7,95,Femenino,Loreto,Mariscal ramon castilla,San pablo,1,1,1,1,Peru,Rural
+8368,55,5,8368_55_5,186,Masculino,Madre de dios,Tambopata,Tambopata,1,1,1,1,Peru,Urbano
+8461,34,3,8461_34_3,320,Femenino,Madre de dios,Tahuamanu,Tahuamanu,1,1,1,1,Peru,Rural
+8478,52,4,8478_52_4,1410,Masculino,Moquegua,Mariscal nieto,Moquegua,1,1,1,1,Peru,Urbano
+8485,4,99,8485_4_99,1410,Masculino,Moquegua,Mariscal nieto,Moquegua,1,1,1,1,Peru,Urbano
+8509,61,6,8509_61_6,1410,Masculino,Moquegua,Mariscal nieto,Moquegua,1,1,1,1,Peru,Urbano
+8615,82,6,8615_82_6,4297,Masculino,Pasco,Pasco,Yanacancha,1,1,1,1,Peru,Urbano
+8615,93,6,8615_93_6,4297,Femenino,Pasco,Pasco,Yanacancha,1,1,1,1,Peru,Urbano
+8686,27,4,8686_27_4,2068,Femenino,Pasco,Oxapampa,Villa rica,1,1,1,1,Peru,Urbano
+8694,61,5,8694_61_5,3245,Masculino,Pasco,Daniel alcides carrion,Paucar,1,1,1,1,Peru,Rural
+8707,82,5,8707_82_5,4200,Masculino,Pasco,Pasco,Simon bolivar,1,1,1,1,Peru,Rural
+8729,65,4,8729_65_4,1814,Masculino,Pasco,Oxapampa,Oxapampa,1,1,1,1,Peru,Rural
+8729,67,6,8729_67_6,1814,Femenino,Pasco,Oxapampa,Oxapampa,1,1,1,1,Peru,Rural
+8756,64,7,8756_64_7,29,Femenino,Piura,Piura,Piura,1,1,1,1,Peru,Urbano
+8793,47,5,8793_47_5,30,Masculino,Piura,Piura,Castilla,1,1,1,1,Peru,Urbano
+8811,31,8,8811_31_8,15,Masculino,Piura,Talara,Pariã‘as,1,1,1,1,Peru,Urbano
+8831,57,4,8831_57_4,3,Femenino,Piura,Paita,Colan,1,1,1,1,Peru,Urbano
+8852,84,4,8852_84_4,65,Femenino,Piura,Sullana,Querecotillo,1,1,1,1,Peru,Urbano
+8857,71,5,8857_71_5,48,Femenino,Piura,Sullana,Marcavelica,1,1,1,1,Peru,Urbano
+8900,7,99,8900_7_99,17,Femenino,Piura,Sechura,Vice,1,1,1,1,Peru,Urbano
+8900,95,8,8900_95_8,17,Masculino,Piura,Sechura,Vice,1,1,1,1,Peru,Urbano
+8913,96,5,8913_96_5,29,Femenino,Piura,Piura,Piura,1,1,1,1,Peru,Rural
+8918,91,7,8918_91_7,68,Femenino,Piura,Piura,Tambo grande,1,1,1,1,Peru,Rural
+8965,38,4,8965_38_4,3827,Femenino,Puno,Puno,Puno,1,1,1,1,Peru,Urbano
+9024,51,5,9024_51_5,3824,Masculino,Puno,San roman,Juliaca,1,1,1,1,Peru,Urbano
+9054,65,7,9054_65_7,3589,Masculino,Puno,Azangaro,Azangaro,1,1,1,1,Peru,Rural
+9054,86,5,9054_86_5,3589,Masculino,Puno,Azangaro,Azangaro,1,1,1,1,Peru,Rural
+9063,17,6,9063_17_6,3830,Femenino,Puno,Azangaro,Saman,1,1,1,1,Peru,Rural
+9063,71,6,9063_71_6,3830,Femenino,Puno,Azangaro,Saman,1,1,1,1,Peru,Rural
+9168,90,4,9168_90_4,1100,Femenino,San Martin,Lamas,Alonso de alvarado,1,1,1,1,Peru,Urbano
+9173,93,5,9173_93_5,809,Femenino,San Martin,Lamas,Lamas,1,1,1,1,Peru,Urbano
+9179,73,9,9179_73_9,1450,Femenino,San Martin,Rioja,Pardo miguel,1,1,1,1,Peru,Rural
+9184,22,3,9184_22_3,842,Masculino,San Martin,Rioja,Rioja,1,1,1,1,Peru,Rural
+9185,36,4,9185_36_4,960,Femenino,San Martin,Moyobamba,Yantalo,1,1,1,1,Peru,Rural
+9194,73,5,9194_73_5,1113,Femenino,San Martin,Moyobamba,Jepelacio,1,1,1,1,Peru,Rural
+9218,15,5,9218_15_5,283,Femenino,San Martin,San martin,Morales,1,1,1,1,Peru,Urbano
+9232,99,4,9232_99_4,333,Masculino,San Martin,San martin,Tarapoto,1,1,1,1,Peru,Urbano
+9233,32,4,9233_32_4,333,Femenino,San Martin,San martin,Tarapoto,1,1,1,1,Peru,Urbano
+9248,9,99,9248_9_99,350,Masculino,San Martin,San martin,La banda de shilcayo,1,1,1,1,Peru,Urbano
+9249,39,7,9249_39_7,350,Masculino,San Martin,San martin,La banda de shilcayo,1,1,1,1,Peru,Urbano
+9272,76,5,9272_76_5,249,Masculino,San Martin,Callao,Bellavista,1,1,1,1,Peru,Urbano
+9274,43,6,9274_43_6,249,Femenino,San Martin,Callao,Bellavista,1,1,1,1,Peru,Urbano
+9337,9,99,9337_9_99,670,Masculino,Tacna,Tacna,Pocollay,1,1,1,1,Peru,Urbano
+9342,58,7,9342_58_7,562,Masculino,Tacna,Tacna,Tacna,1,1,1,1,Peru,Urbano
+9400,41,6,9400_41_6,560,Masculino,Tacna,Tacna,Coronel gregorio albarracin lanchipa,1,1,1,1,Peru,Urbano
+9404,31,5,9404_31_5,560,Masculino,Tacna,Tacna,Coronel gregorio albarracin lanchipa,1,1,1,1,Peru,Urbano
+9445,30,6,9445_30_6,3415,Masculino,Tacna,Candarave,Quilahuani,1,1,1,1,Peru,Rural
+9450,83,6,9450_83_6,374,Masculino,Tacna,Tacna,Sama,1,1,1,1,Peru,Rural
+9450,85,2,9450_85_2,374,Femenino,Tacna,Tacna,Sama,1,1,1,1,Peru,Rural
+9478,63,6,9478_63_6,7,Masculino,Tumbes,Tumbes,Tumbes,1,1,1,1,Peru,Urbano
+9507,49,5,9507_49_5,7,Masculino,Tumbes,Tumbes,Tumbes,1,1,1,1,Peru,Urbano
+9508,62,6,9508_62_6,7,Masculino,Tumbes,Tumbes,Tumbes,1,1,1,1,Peru,Urbano
+9568,21,4,9568_21_4,7,Femenino,Tumbes,Zarumilla,Aguas verdes,1,1,1,1,Peru,Urbano
+9601,10,7,9601_10_7,54,Femenino,Tumbes,Zarumilla,Matapalo,1,1,1,1,Peru,Rural
+9601,10,8,9601_10_8,54,Femenino,Tumbes,Zarumilla,Matapalo,1,1,1,1,Peru,Rural
+9607,55,4,9607_55_4,195,Masculino,Ucayali,Coronel portillo,Yarinacocha,1,1,1,1,Peru,Urbano
+9638,64,6,9638_64_6,154,Masculino,Ucayali,Coronel portillo,Calleria,1,1,1,1,Peru,Urbano
+9639,33,4,9639_33_4,154,Femenino,Ucayali,Coronel portillo,Calleria,1,1,1,1,Peru,Urbano
+9695,97,6,9695_97_6,287,Masculino,Ucayali,Padre abad,Padre abad,1,1,1,1,Peru,Urbano
+9719,3,99,9719_3_99,450,Masculino,Ucayali,Atalaya,Raymondi,1,1,1,1,Peru,Urbano
+9735,50,5,9735_50_5,212,Masculino,Ucayali,Padre abad,Irazola,1,1,1,1,Peru,Rural
+9736,33,5,9736_33_5,212,Masculino,Ucayali,Padre abad,Neshuya,1,1,1,1,Peru,Rural
+9736,33,6,9736_33_6,212,Masculino,Ucayali,Padre abad,Neshuya,1,1,1,1,Peru,Rural
+9740,56,3,9740_56_3,150,Masculino,Ucayali,Padre abad,Curimana,1,1,1,1,Peru,Rural
+9827,29,5,9827_29_5,562,Femenino,Tacna,Tacna,Tacna,1,1,1,1,Peru,Urbano
+10012,63,7,10012_63_7,6,Masculino,Ancash,Santa,Santa,1,1,1,1,Peru,Urbano
+10012,7,99,10012_7_99,6,Masculino,Ancash,Santa,Santa,1,1,1,1,Peru,Urbano
+10020,62,7,10020_62_7,3910,Masculino,Ancash,Carhuaz,Shilla,1,1,1,1,Peru,Rural
+10060,52,4,10060_52_4,3375,Masculino,Ayacucho,Lucanas,Lucanas,1,1,1,1,Peru,Rural
+10080,67,3,10080_67_3,21,Femenino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+10111,55,5,10111_55_5,626,Femenino,Huanuco,Leoncio prado,Daniel alcides carrion,1,1,1,1,Peru,Rural
+10122,30,6,10122_30_6,42,Masculino,Ica,Chincha,Chincha alta,1,1,1,1,Peru,Urbano
+10122,44,7,10122_44_7,41,Masculino,Ica,Chincha,Chincha alta,1,1,1,1,Peru,Urbano
+10210,45,3,10210_45_3,238,Femenino,Lima,Lima,Carabayllo,1,1,1,1,Peru,Urbano
+10323,48,7,10323_48_7,65,Masculino,Piura,Sullana,Querecotillo,1,1,1,1,Peru,Rural
+10327,90,6,10327_90_6,1319,Femenino,Piura,Ayabaca,Jilili,1,1,1,1,Peru,Rural
+10327,91,7,10327_91_7,1319,Masculino,Piura,Ayabaca,Jilili,1,1,1,1,Peru,Rural
+10359,30,5,10359_30_5,1700,Masculino,San Martin,Rioja,Awajun,1,1,1,1,Peru,Rural
+10380,11,7,10380_11_7,154,Masculino,Ucayali,Coronel portillo,Calleria,1,1,1,1,Peru,Urbano
+10380,55,5,10380_55_5,154,Masculino,Ucayali,Coronel portillo,Calleria,1,1,1,1,Peru,Urbano
+5013,139,6,5013_139_6,2335,Masculino,Amazonas,Chachapoyas,Chachapoyas,1,1,1,1,Peru,Urbano
+5074,157,8,5074_157_8,480,Masculino,Amazonas,Condorcanqui,Rio santiago,1,1,1,1,Peru,Rural
+5074,160,6,5074_160_6,480,Femenino,Amazonas,Condorcanqui,Rio santiago,1,1,1,1,Peru,Rural
+5074,78,99,5074_78_99,480,Femenino,Amazonas,Condorcanqui,Rio santiago,1,1,1,1,Peru,Rural
+5074,80,99,5074_80_99,480,Masculino,Amazonas,Condorcanqui,Rio santiago,1,1,1,1,Peru,Rural
+5224,138,4,5224_138_4,39,Femenino,Ancash,Casma,Casma,1,1,1,1,Peru,Urbano
+5241,106,4,5241_106_4,5,Masculino,Ancash,Huarmey,Culebras,1,1,1,1,Peru,Rural
+5286,103,5,5286_103_5,2185,Masculino,Ancash,Huaylas,Mato,1,1,1,1,Peru,Rural
+5392,167,3,5392_167_3,3400,Femenino,Apurimac,Chincheros,Ranracancha,1,1,1,1,Peru,Rural
+5408,119,7,5408_119_7,3665,Femenino,Apurimac,Andahuaylas,Kishuara,1,1,1,1,Peru,Rural
+5435,208,4,5435_208_4,2378,Masculino,Apurimac,Abancay,Abancay,1,1,1,1,Peru,Rural
+5451,132,4,5451_132_4,3139,Masculino,Apurimac,Aymaraes,Cotaruse,1,1,1,1,Peru,Rural
+5567,100,5,5567_100_5,2300,Masculino,Arequipa,Arequipa,Socabaya,1,1,1,1,Peru,Urbano
+5567,100,4,5567_100_4,2300,Femenino,Arequipa,Arequipa,Socabaya,1,1,1,1,Peru,Urbano
+5767,101,7,5767_101_7,3262,Masculino,Ayacucho,Huanta,Santillana,1,1,1,1,Peru,Rural
+5785,241,4,5785_241_4,3616,Femenino,Ayacucho,Huanta,Vinchos,1,1,1,1,Peru,Rural
+5785,250,6,5785_250_6,3616,Masculino,Ayacucho,Huanta,Vinchos,1,1,1,1,Peru,Rural
+5810,129,5,5810_129_5,3126,Femenino,Ayacucho,Vilcashuaman,Vischongo,1,1,1,1,Peru,Rural
+5933,112,6,5933_112_6,2649,Masculino,Cajamarca,Cutervo,Cutervo,1,1,1,1,Peru,Rural
+5938,138,5,5938_138_5,1600,Femenino,Cajamarca,Cutervo,Callayuc,1,1,1,1,Peru,Rural
+5978,159,5,5978_159_5,2750,Masculino,Cajamarca,San miguel,Catilluc,1,1,1,1,Peru,Rural
+6065,45,99,6065_45_99,21,Femenino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+6092,139,4,6092_139_4,34,Femenino,Callao,Callao,Bellavista,1,1,1,1,Peru,Urbano
+6095,19,12,6095_19_12,34,Femenino,Callao,Callao,Bellavista,1,1,1,1,Peru,Urbano
+6098,140,5,6098_140_5,34,Masculino,Callao,Callao,Bellavista,1,1,1,1,Peru,Urbano
+6126,147,6,6126_147_6,7,Masculino,Callao,Callao,Callao,1,1,1,1,Peru,Urbano
+6141,110,4,6141_110_4,28,Masculino,Callao,Callao,Callao,1,1,1,1,Peru,Urbano
+6179,159,4,6179_159_4,7,Masculino,Callao,Callao,La perla,1,1,1,1,Peru,Urbano
+6195,68,99,6195_68_99,3399,Femenino,Cusco,Cusco,San sebastian,1,1,1,1,Peru,Urbano
+6207,110,4,6207_110_4,3400,Femenino,Cusco,Cusco,Santiago,1,1,1,1,Peru,Urbano
+6292,65,99,6292_65_99,2846,Masculino,Cusco,Urubamba,Ollantaytambo,1,1,1,1,Peru,Rural
+6298,107,3,6298_107_3,3435,Masculino,Cusco,Anta,Ancahuasi,1,1,1,1,Peru,Rural
+6417,181,6,6417_181_6,2350,Masculino,Huancavelica,Tayacaja,Tintay puncu,1,1,1,1,Peru,Rural
+6460,101,7,6460_101_7,3167,Femenino,Huancavelica,Huancavelica,Acoria,1,1,1,1,Peru,Rural
+6483,225,6,6483_225_6,3523,Masculino,Huancavelica,Angaraes,Congalla,1,1,1,1,Peru,Rural
+6483,72,99,6483_72_99,3523,Masculino,Huancavelica,Angaraes,Congalla,1,1,1,1,Peru,Rural
+6569,137,4,6569_137_4,2750,Femenino,Huanuco,Maranon,Cholon,1,1,1,1,Peru,Rural
+6572,114,8,6572_114_8,3561,Masculino,Huanuco,Huacaybamba,Pinra,1,1,1,1,Peru,Rural
+6572,118,5,6572_118_5,3561,Masculino,Huanuco,Huacaybamba,Pinra,1,1,1,1,Peru,Rural
+6581,82,99,6581_82_99,600,Masculino,Huanuco,Leoncio prado,Castillo grande,1,1,1,1,Peru,Rural
+6595,143,6,6595_143_6,3552,Masculino,Huanuco,Huamalies,Jacas grande,1,1,1,1,Peru,Rural
+6597,166,5,6597_166_5,3615,Femenino,Huanuco,Huamalies,Singa,1,1,1,1,Peru,Rural
+6651,194,4,6651_194_4,3000,Masculino,Huanuco,Pachitea,Chaglla,1,1,1,1,Peru,Rural
+6651,194,7,6651_194_7,3000,Femenino,Huanuco,Pachitea,Chaglla,1,1,1,1,Peru,Rural
+6652,102,5,6652_102_5,1846,Masculino,Huanuco,Pachitea,Panao,1,1,1,1,Peru,Rural
+6713,112,4,6713_112_4,406,Femenino,Ica,Ica,Ica,1,1,1,1,Peru,Urbano
+6740,108,3,6740_108_3,42,Masculino,Ica,Chincha,Pueblo nuevo,1,1,1,1,Peru,Urbano
+6788,146,4,6788_146_4,406,Masculino,Ica,Pisco,Pisco,1,1,1,1,Peru,Urbano
+6866,81,99,6866_81_99,374,Masculino,Ica,Ica,Santiago,1,1,1,1,Peru,Rural
+6960,98,99,6960_98_99,1000,Femenino,Junin,Chanchamayo,Perene,1,1,1,1,Peru,Urbano
+7002,49,99,7002_49_99,3600,Masculino,Junin,Junin,Ulcumayo,1,1,1,1,Peru,Rural
+7041,301,5,7041_301_5,3263,Masculino,Junin,Chupaca,Chupaca,1,1,1,1,Peru,Rural
+7087,126,5,7087_126_5,77,Masculino,La libertad,Trujillo,La esperanza,1,1,1,1,Peru,Urbano
+7108,101,5,7108_101_5,34,Femenino,La libertad,Trujillo,Trujillo,1,1,1,1,Peru,Urbano
+7145,115,3,7145_115_3,90,Femenino,La libertad,Trujillo,El porvenir,1,1,1,1,Peru,Urbano
+7182,89,99,7182_89_99,43,Femenino,La libertad,Pacasmayo,San pedro de lloc,1,1,1,1,Peru,Urbano
+7208,112,4,7208_112_4,4,Masculino,La libertad,Trujillo,Moche,1,1,1,1,Peru,Urbano
+7236,196,7,7236_196_7,82,Femenino,La libertad,Chepen,Pacanga,1,1,1,1,Peru,Rural
+7241,211,6,7241_211_6,89,Masculino,La libertad,Trujillo,Laredo,1,1,1,1,Peru,Rural
+7248,88,99,7248_88_99,3018,Femenino,La libertad,Otuzco,Usquil,1,1,1,1,Peru,Rural
+7253,77,99,7253_77_99,3439,Femenino,La libertad,Otuzco,Saldo,1,1,1,1,Peru,Rural
+7279,76,99,7279_76_99,3099,Masculino,La libertad,Santiago de chuco,Santiago de chuco,1,1,1,1,Peru,Rural
+7326,109,5,7326_109_5,29,Femenino,Lambayeque,Chiclayo,Chiclayo,1,1,1,1,Peru,Urbano
+7339,136,7,7339_136_7,40,Femenino,Lambayeque,Chiclayo,Jose leonardo ortiz,1,1,1,1,Peru,Urbano
+7411,165,6,7411_165_6,22,Femenino,Lambayeque,Chiclayo,Reque,1,1,1,1,Peru,Urbano
+7442,373,5,7442_373_5,17,Femenino,Lambayeque,Lambayeque,Lambayeque,1,1,1,1,Peru,Rural
+7443,165,9,7443_165_9,16,Femenino,Lambayeque,Lambayeque,Morrope,1,1,1,1,Peru,Rural
+7446,126,5,7446_126_5,16,Femenino,Lambayeque,Lambayeque,Morrope,1,1,1,1,Peru,Rural
+7446,127,8,7446_127_8,16,Masculino,Lambayeque,Lambayeque,Morrope,1,1,1,1,Peru,Rural
+7511,187,4,7511_187_4,123,Femenino,Lima,Lima,San martin de porres,1,1,1,1,Peru,Urbano
+7531,55,11,7531_55_11,123,Femenino,Lima,Lima,San martin de porres,1,1,1,1,Peru,Urbano
+7549,67,99,7549_67_99,70,Masculino,Lima,Lima,Los olivos,1,1,1,1,Peru,Urbano
+7564,29,99,7564_29_99,140,Masculino,Lima,Lima,Comas,1,1,1,1,Peru,Urbano
+7567,59,99,7567_59_99,140,Femenino,Lima,Lima,Comas,1,1,1,1,Peru,Urbano
+7571,152,4,7571_152_4,140,Femenino,Lima,Lima,Comas,1,1,1,1,Peru,Urbano
+7577,153,4,7577_153_4,140,Femenino,Lima,Lima,Comas,1,1,1,1,Peru,Urbano
+7603,100,5,7603_100_5,220,Masculino,Lima,Lima,San juan de lurigancho,1,1,1,1,Peru,Urbano
+7605,104,4,7605_104_4,220,Femenino,Lima,Lima,San juan de lurigancho,1,1,1,1,Peru,Urbano
+7621,16,11,7621_16_11,220,Masculino,Lima,Lima,San juan de lurigancho,1,1,1,1,Peru,Urbano
+7622,92,10,7622_92_10,220,Femenino,Lima,Lima,San juan de lurigancho,1,1,1,1,Peru,Urbano
+7628,156,3,7628_156_3,220,Femenino,Lima,Lima,San juan de lurigancho,1,1,1,1,Peru,Urbano
+7647,97,99,7647_97_99,220,Femenino,Lima,Huarochiri,San antonio de chosica,1,1,1,1,Peru,Urbano
+7745,107,9,7745_107_9,102,Masculino,Lima,Lima,Breã‘a,1,1,1,1,Peru,Urbano
+7898,190,4,7898_190_4,37,Masculino,Lima,Lima,Chorrillos,1,1,1,1,Peru,Urbano
+7921,103,5,7921_103_5,141,Masculino,Lima,Lima,San juan de miraflores,1,1,1,1,Peru,Urbano
+7962,12,99,7962_12_99,158,Femenino,Lima,Lima,Villa maria del triunfo,1,1,1,1,Peru,Urbano
+7992,132,7,7992_132_7,49,Femenino,Lima,Barranca,Barranca,1,1,1,1,Peru,Urbano
+8034,114,7,8034_114_7,12,Masculino,Lima,Huaura,Vegueta,1,1,1,1,Peru,Urbano
+8188,128,9,8188_128_9,105,Femenino,Loreto,Maynas,Punchana,1,1,1,1,Peru,Urbano
+8201,157,3,8201_157_3,106,Masculino,Loreto,Maynas,Iquitos,1,1,1,1,Peru,Urbano
+8201,175,6,8201_175_6,106,Masculino,Loreto,Maynas,Iquitos,1,1,1,1,Peru,Urbano
+8217,79,99,8217_79_99,106,Masculino,Loreto,Maynas,Iquitos,1,1,1,1,Peru,Urbano
+8245,102,6,8245_102_6,138,Masculino,Loreto,Maynas,San juan bautista,1,1,1,1,Peru,Urbano
+8281,76,99,8281_76_99,160,Masculino,Loreto,Alto amazonas,Yurimaguas,1,1,1,1,Peru,Urbano
+8307,114,7,8307_114_7,164,Femenino,Loreto,Ucayali,Padre marquez,1,1,1,1,Peru,Urbano
+8307,39,99,8307_39_99,164,Femenino,Loreto,Ucayali,Padre marquez,1,1,1,1,Peru,Urbano
+8311,102,9,8311_102_9,150,Femenino,Loreto,Datem del maranon,Morona,1,1,1,1,Peru,Rural
+8317,68,99,8317_68_99,111,Femenino,Loreto,Loreto,Nauta,1,1,1,1,Peru,Rural
+8318,100,8,8318_100_8,250,Femenino,Loreto,Maynas,Torres causana,1,1,1,1,Peru,Rural
+8327,66,10,8327_66_10,106,Masculino,Loreto,Maynas,Iquitos,1,1,1,1,Peru,Rural
+8330,106,7,8330_106_7,138,Masculino,Loreto,Maynas,San juan bautista,1,1,1,1,Peru,Rural
+8335,136,7,8335_136_7,105,Masculino,Loreto,Maynas,Indiana,1,1,1,1,Peru,Rural
+8335,137,6,8335_137_6,105,Masculino,Loreto,Maynas,Indiana,1,1,1,1,Peru,Rural
+8335,40,99,8335_40_99,105,Femenino,Loreto,Maynas,Indiana,1,1,1,1,Peru,Rural
+8440,199,3,8440_199_3,330,Femenino,Madre de dios,Manu,Madre de dios,1,1,1,1,Peru,Rural
+8509,142,5,8509_142_5,1410,Femenino,Moquegua,Mariscal nieto,Moquegua,1,1,1,1,Peru,Urbano
+8596,102,9,8596_102_9,3756,Masculino,Moquegua,General sanchez cerro,Ichuã‘a,1,1,1,1,Peru,Rural
+8671,123,6,8671_123_6,4140,Masculino,Pasco,Pasco,Ninacaca,1,1,1,1,Peru,Urbano
+8676,149,8,8676_149_8,4200,Femenino,Pasco,Pasco,Paucartambo,1,1,1,1,Peru,Urbano
+8729,63,99,8729_63_99,1814,Femenino,Pasco,Oxapampa,Oxapampa,1,1,1,1,Peru,Rural
+8757,108,5,8757_108_5,29,Masculino,Piura,Piura,Piura,1,1,1,1,Peru,Urbano
+8811,31,99,8811_31_99,15,Femenino,Piura,Talara,Pariã‘as,1,1,1,1,Peru,Urbano
+8846,129,4,8846_129_4,60,Femenino,Piura,Sullana,Sullana,1,1,1,1,Peru,Urbano
+8916,135,6,8916_135_6,80,Femenino,Piura,Piura,Tambo grande,1,1,1,1,Peru,Rural
+8918,218,6,8918_218_6,68,Masculino,Piura,Piura,Tambo grande,1,1,1,1,Peru,Rural
+8918,220,4,8918_220_4,68,Femenino,Piura,Piura,Tambo grande,1,1,1,1,Peru,Rural
+9073,133,3,9073_133_3,3824,Masculino,Puno,San roman,Juliaca,1,1,1,1,Peru,Rural
+9188,120,4,9188_120_4,860,Femenino,San Martin,Moyobamba,Moyobamba,1,1,1,1,Peru,Rural
+9188,31,99,9188_31_99,860,Masculino,San Martin,Moyobamba,Moyobamba,1,1,1,1,Peru,Rural
+9194,71,99,9194_71_99,1113,Masculino,San Martin,Moyobamba,Jepelacio,1,1,1,1,Peru,Rural
+9257,105,6,9257_105_6,283,Femenino,San Martin,Mariscal caceres,Juanjui,1,1,1,1,Peru,Urbano
+9257,105,7,9257_105_7,283,Femenino,San Martin,Mariscal caceres,Juanjui,1,1,1,1,Peru,Urbano
+9258,55,99,9258_55_99,283,Femenino,San Martin,Mariscal caceres,Juanjui,1,1,1,1,Peru,Urbano
+9286,108,4,9286_108_4,310,Masculino,San Martin,Mariscal caceres,Pajarillo,1,1,1,1,Peru,Rural
+9286,114,5,9286_114_5,310,Femenino,San Martin,Mariscal caceres,Pajarillo,1,1,1,1,Peru,Rural
+9342,127,6,9342_127_6,562,Femenino,Tacna,Tacna,Tacna,1,1,1,1,Peru,Urbano
+9400,70,99,9400_70_99,560,Femenino,Tacna,Tacna,Coronel gregorio albarracin lanchipa,1,1,1,1,Peru,Urbano
+9525,84,99,9525_84_99,6,Femenino,Tumbes,Contralmirante villar,Zorritos,1,1,1,2,Peru,Urbano
+9639,88,99,9639_88_99,154,Masculino,Ucayali,Coronel portillo,Calleria,1,1,1,1,Peru,Urbano
+9650,55,99,9650_55_99,154,Masculino,Ucayali,Coronel portillo,Calleria,1,1,1,1,Peru,Urbano
+9659,116,5,9659_116_5,154,Femenino,Ucayali,Coronel portillo,Calleria,1,1,1,1,Peru,Urbano
+9684,109,6,9684_109_6,150,Femenino,Ucayali,Coronel portillo,Manantay,1,1,1,1,Peru,Urbano
+9719,170,4,9719_170_4,450,Femenino,Ucayali,Atalaya,Raymondi,1,1,1,1,Peru,Urbano
+9731,126,5,9731_126_5,287,Masculino,Ucayali,Padre abad,Padre abad,1,1,1,1,Peru,Rural
+9731,130,3,9731_130_3,287,Femenino,Ucayali,Padre abad,Padre abad,1,1,1,1,Peru,Rural
+9736,105,4,9736_105_4,212,Femenino,Ucayali,Padre abad,Neshuya,1,1,1,1,Peru,Rural
+9736,105,5,9736_105_5,212,Femenino,Ucayali,Padre abad,Neshuya,1,1,1,1,Peru,Rural
+9740,133,7,9740_133_7,150,Masculino,Ucayali,Padre abad,Curimana,1,1,1,1,Peru,Rural
+9740,135,4,9740_135_4,150,Masculino,Ucayali,Padre abad,Curimana,1,1,1,1,Peru,Rural
+9740,55,99,9740_55_99,150,Femenino,Ucayali,Padre abad,Curimana,1,1,1,1,Peru,Rural
+9740,58,99,9740_58_99,150,Femenino,Ucayali,Padre abad,Curimana,1,1,1,1,Peru,Rural
+9756,55,10,9756_55_10,270,Masculino,Ucayali,Coronel portillo,Iparia,1,1,1,1,Peru,Rural
+9820,19,99,9820_19_99,21,Masculino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+10060,132,4,10060_132_4,3375,Femenino,Ayacucho,Lucanas,Lucanas,1,1,1,1,Peru,Rural
+10080,101,5,10080_101_5,21,Masculino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+10080,11,99,10080_11_99,21,Masculino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+10122,114,9,10122_114_9,41,Masculino,Ica,Chincha,Chincha alta,1,1,1,1,Peru,Urbano
+10175,113,4,10175_113_4,130,Masculino,La libertad,Chepen,Chepen,1,1,1,1,Peru,Urbano
+10176,137,4,10176_137_4,92,Masculino,La libertad,Pacasmayo,Guadalupe,1,1,1,1,Peru,Urbano
+10254,157,4,10254_157_4,67,Masculino,Lima,Huaura,Huaura,1,1,1,1,Peru,Urbano
+10262,160,7,10262_160_7,12,Masculino,Lima,Huaura,Vegueta,1,1,1,1,Peru,Rural
+10327,36,99,10327_36_99,1319,Masculino,Piura,Ayabaca,Jilili,1,1,1,1,Peru,Rural
+10327,91,99,10327_91_99,1319,Femenino,Piura,Ayabaca,Jilili,1,1,1,1,Peru,Rural
+10359,133,6,10359_133_6,1700,Femenino,San Martin,Rioja,Awajun,1,1,1,1,Peru,Rural
+10359,135,8,10359_135_8,1700,Masculino,San Martin,Rioja,Awajun,1,1,1,1,Peru,Rural
+10371,101,3,10371_101_3,562,Femenino,Tacna,Tacna,Tacna,1,1,1,1,Peru,Urbano
+5074,160,99,5074_160_99,480,Femenino,Amazonas,Condorcanqui,Rio santiago,1,1,1,1,Peru,Rural
+5155,213,99,5155_213_99,2891,Femenino,Amazonas,Chachapoyas,La jalca,1,1,1,1,Peru,Rural
+5392,167,99,5392_167_99,3400,Masculino,Apurimac,Chincheros,Ranracancha,1,1,1,1,Peru,Rural
+5392,168,99,5392_168_99,3400,Masculino,Apurimac,Chincheros,Ranracancha,1,1,1,1,Peru,Rural
+5686,133,99,5686_133_99,2780,Masculino,Ayacucho,Huamanga,Jesus nazareno,1,1,1,1,Peru,Urbano
+5810,133,99,5810_133_99,3126,Femenino,Ayacucho,Vilcashuaman,Vischongo,1,1,1,1,Peru,Rural
+6065,113,99,6065_113_99,21,Masculino,Callao,Callao,Ventanilla,1,1,1,1,Peru,Urbano
+6352,351,99,6352_351_99,3475,Femenino,Cusco,Canchis,Combapata,1,1,1,1,Peru,Rural
+6483,237,10,6483_237_10,3523,Masculino,Huancavelica,Angaraes,Congalla,1,1,1,1,Peru,Rural
+6569,127,99,6569_127_99,2750,Femenino,Huanuco,Maranon,Cholon,1,1,1,1,Peru,Rural
+7108,241,99,7108_241_99,34,Masculino,La libertad,Trujillo,Trujillo,1,1,1,1,Peru,Urbano
+7241,214,99,7241_214_99,89,Masculino,La libertad,Trujillo,Laredo,1,1,1,1,Peru,Rural
+7446,127,99,7446_127_99,16,Masculino,Lambayeque,Lambayeque,Morrope,1,1,1,1,Peru,Rural
+7446,128,99,7446_128_99,16,Masculino,Lambayeque,Lambayeque,Morrope,1,1,1,1,Peru,Rural
+7541,123,99,7541_123_99,75,Masculino,Lima,Lima,Los olivos,1,1,1,1,Peru,Urbano
+7992,101,99,7992_101_99,49,Femenino,Lima,Barranca,Barranca,1,1,1,1,Peru,Urbano
+8311,105,10,8311_105_10,150,Masculino,Loreto,Datem del maranon,Morona,1,1,1,1,Peru,Rural
+8318,101,99,8318_101_99,250,Masculino,Loreto,Maynas,Torres causana,1,1,1,1,Peru,Rural
+8770,114,99,8770_114_99,36,Masculino,Piura,Piura,Veintiseis de octubre,1,1,1,1,Peru,Urbano
+8918,219,99,8918_219_99,68,Femenino,Piura,Piura,Tambo grande,1,1,1,1,Peru,Rural
+9184,108,99,9184_108_99,842,Femenino,San Martin,Rioja,Rioja,1,1,1,1,Peru,Rural
+9287,142,99,9287_142_99,328,Femenino,San Martin,Mariscal caceres,Pachiza,1,1,1,1,Peru,Rural
+9607,105,10,9607_105_10,195,Masculino,Ucayali,Coronel portillo,Yarinacocha,1,1,1,1,Peru,Urbano
+9719,109,99,9719_109_99,450,Femenino,Ucayali,Atalaya,Raymondi,1,1,1,1,Peru,Urbano
+10122,114,11,10122_114_11,41,Femenino,Ica,Chincha,Chincha alta,1,1,1,1,Peru,Urbano
+10183,117,99,10183_117_99,72,Femenino,La libertad,Chepen,Pueblo nuevo,1,1,1,1,Peru,Rural
+10262,161,99,10262_161_99,12,Femenino,Lima,Huaura,Vegueta,1,1,1,1,Peru,Rural
+10380,142,14,10380_142_14,154,Femenino,Ucayali,Coronel portillo,Calleria,1,1,1,1,Peru,Urbano
